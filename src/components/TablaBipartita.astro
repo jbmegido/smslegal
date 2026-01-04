@@ -1,0 +1,47 @@
+---
+interface Props {
+  incluye: string[];
+  noIncluye: string[];
+}
+
+const { incluye, noIncluye } = Astro.props;
+---
+
+<div class="my-8 overflow-x-auto">
+  <table class="w-full border-collapse border border-doc-border">
+    <thead>
+      <tr class="bg-doc-bg-dark">
+        <th class="border border-doc-border p-4 text-left font-serif font-semibold">
+          Incluye
+        </th>
+        <th class="border border-doc-border p-4 text-left font-serif font-semibold">
+          No incluye
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-doc-border p-4 align-top">
+          <ul class="space-y-2 font-mono text-doc-mono">
+            {incluye.map(item => (
+              <li class="flex gap-2">
+                <span class="text-doc-secondary">-</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </td>
+        <td class="border border-doc-border p-4 align-top">
+          <ul class="space-y-2 font-mono text-doc-mono">
+            {noIncluye.map(item => (
+              <li class="flex gap-2">
+                <span class="text-doc-secondary">-</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

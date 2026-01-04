@@ -1,0 +1,145 @@
+---
+import DocumentoBase from '../layouts/DocumentoBase.astro';
+import SeccionDocumental from '../components/SeccionDocumental.astro';
+
+const title = "Política de Privacidad - SMS Legal";
+const description = "Política de privacidad y protección de datos de SMS Infrastructure conforme al RGPD";
+---
+
+<DocumentoBase title={title} description={description}>
+  <SeccionDocumental>
+    <article class="prose prose-doc max-w-none">
+      <h1>Política de Privacidad</h1>
+      
+      <p><strong>Última actualización:</strong> Enero 2025</p>
+
+      <h2>1. Responsable del tratamiento</h2>
+      
+      <p><strong>Identidad:</strong> SMS Infrastructure<br/>
+      <strong>Correo electrónico:</strong> legal@smslegal.es</p>
+
+      <h2>2. Finalidad del tratamiento</h2>
+
+      <p>Los datos personales facilitados a través de los formularios de contacto o solicitud de acceso serán tratados con las siguientes finalidades:</p>
+
+      <ul>
+        <li>Evaluar la solicitud de acceso al servicio</li>
+        <li>Gestionar la relación precontractual y contractual</li>
+        <li>Cumplir con obligaciones legales derivadas del RGPD y normativa aplicable</li>
+        <li>Conservar trazabilidad documental durante 6 años según obligación legal</li>
+      </ul>
+
+      <h2>3. Base jurídica</h2>
+
+      <ul>
+        <li><strong>Consentimiento</strong> (art. 6.1.a RGPD): Al enviar el formulario</li>
+        <li><strong>Interés legítimo</strong> (art. 6.1.f RGPD): Evaluación de riesgo legal y compliance</li>
+        <li><strong>Obligación legal</strong> (art. 6.1.c RGPD): Conservación registros RGPD</li>
+      </ul>
+
+      <h2>4. Conservación de datos</h2>
+
+      <p>Los datos personales se conservarán durante:</p>
+
+      <ul>
+        <li>Solicitudes no admitidas: 1 año</li>
+        <li>Clientes activos: Durante la vigencia del contrato</li>
+        <li>Clientes cancelados: 6 años desde la fecha de cancelación (obligación legal RGPD)</li>
+      </ul>
+
+      <h2>5. Destinatarios de los datos</h2>
+
+      <p>No se ceden datos a terceros salvo obligación legal (requerimiento judicial o de la AEPD).</p>
+
+      <h2>6. Derechos del interesado</h2>
+
+      <p>Puede ejercer los siguientes derechos enviando un correo a <a href="mailto:legal@smslegal.es">legal@smslegal.es</a>:</p>
+
+      <ul>
+        <li><strong>Acceso:</strong> Conocer qué datos personales tratamos</li>
+        <li><strong>Rectificación:</strong> Corregir datos inexactos</li>
+        <li><strong>Supresión:</strong> Solicitar eliminación (salvo obligación legal de conservación)</li>
+        <li><strong>Limitación:</strong> Restringir el tratamiento</li>
+        <li><strong>Portabilidad:</strong> Obtener copia en formato estructurado</li>
+        <li><strong>Oposición:</strong> Oponerse al tratamiento por interés legítimo</li>
+      </ul>
+
+      <p>También tiene derecho a presentar reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (www.aepd.es).</p>
+
+      <h2>7. Cookies y tecnologías de seguimiento</h2>
+
+      <p><strong>Este sitio web NO utiliza cookies de seguimiento, analítica ni herramientas de terceros.</strong></p>
+
+      <p>Solo se utilizan cookies técnicas estrictamente necesarias para el funcionamiento del formulario Netlify Forms.</p>
+
+      <h2>8. Seguridad</h2>
+
+      <p>Se aplican medidas técnicas y organizativas para proteger los datos personales contra acceso no autorizado, pérdida o destrucción:</p>
+
+      <ul>
+        <li>Conexión HTTPS cifrada</li>
+        <li>Almacenamiento en servidores con cifrado en reposo</li>
+        <li>Acceso restringido mediante autenticación</li>
+        <li>Política de contraseñas robustas</li>
+      </ul>
+
+      <h2>9. Transferencias internacionales</h2>
+
+      <p>Los datos pueden ser procesados en servidores ubicados en la Unión Europea. No se realizan transferencias fuera del EEE sin garantías adecuadas.</p>
+
+      <h2>10. Contacto</h2>
+
+      <p>Para cualquier consulta sobre esta política: <a href="mailto:legal@smslegal.es">legal@smslegal.es</a></p>
+
+      <hr />
+
+      <p class="text-center">
+        <a href="/" class="text-doc-cta hover:underline">← Volver al inicio</a>
+      </p>
+    </article>
+  </SeccionDocumental>
+</DocumentoBase>
+
+<style is:global>
+  .prose-doc {
+    color: var(--doc-text);
+  }
+
+  .prose-doc h1 {
+    font-size: 34px;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .prose-doc h2 {
+    font-size: 26px;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .prose-doc p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .prose-doc ul, .prose-doc ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .prose-doc li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-doc hr {
+    border: 0;
+    border-top: 1px solid var(--doc-border);
+    margin: 2rem 0;
+  }
+</style>

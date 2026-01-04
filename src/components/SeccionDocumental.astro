@@ -1,32 +1,6 @@
 ---
-import { getBgColorClass } from '../utils/sectionHelpers';
-
-interface Props {
-  backgroundColor?: 'primary' | 'alt' | 'dark';
-  showSeparator?: boolean;
-}
-
-const { 
-  backgroundColor = 'primary',
-  showSeparator = true 
-} = Astro.props;
-
-const bgClass = getBgColorClass(backgroundColor);
+// Simplemente renderiza el slot sin contenedor adicional
+// Ya no se necesita porque el borde está en index.astro
 ---
 
-<section 
-  class={`w-full py-20 sm:py-24 ${bgClass} transition-colors duration-150`}
->
-  <slot />
-  
-  {showSeparator && (
-    <div class="mt-12 border-t border-doc-border mx-6 sm:mx-8 max-w-doc"></div>
-  )}
-</section>
-
-<style>
-  section {
-    display: block;
-    width: 100%;
-  }
-</style>
+<slot />

@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import DocumentoBase from '../layouts/DocumentoBase.astro';
-import SeccionDocumental from '../components/SeccionDocumental.astro';
 import FormularioSolicitud from '../components/FormularioSolicitud.astro';
 import { sortSections } from '../utils/sectionHelpers';
 
@@ -40,26 +39,29 @@ const offerSchema = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(professionalServiceSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
 
-  <!-- Landing completa -->
-  <main class="w-full">
-    {sortedSections.map(async (section) => {
-      const { Content } = await section.render();
-      const isFormularioSection = section.data.tipo === 'formulario-cta';
-      
-      return (
-        <SeccionDocumental 
-          backgroundColor={section.data.backgroundColor}
-          showSeparator={section.data.showSeparator}
-        >
-          <div class="max-w-doc mx-auto px-6 sm:px-8">
-            <article class="prose-doc">
-              <Content />
-              {isFormularioSection && <FormularioSolicitud />}
-            </article>
-          </div>
-        </SeccionDocumental>
-      );
-    })}
+  <!-- Contenedor principal CON BORDE ÚNICO -->
+  <main class="w-full py-8 sm:py-12">
+    <div class="max-w-doc mx-auto px-4 sm:px-6">
+      <!-- BORDE ÚNICO que rodea TODO el contenido -->
+      <div class="border border-doc-border rounded-sm p-8 sm:p-12 bg-white">
+        
+        <!-- Todas las secciones DENTRO del borde único -->
+        {sortedSections.map(async (section) => {
+          const { Content } = await section.render();
+          const isFormularioSection = section.data.tipo === 'formulario-cta';
+          
+          return (
+            <section class="mb-8 sm:mb-12 last:mb-0">
+              <article class="prose-doc">
+                <Content />
+                {isFormularioSection && <FormularioSolicitud />}
+              </article>
+            </section>
+          );
+        })}
+        
+      </div>
+    </div>
   </main>
 </DocumentoBase>
 

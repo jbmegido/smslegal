@@ -1,11 +1,6 @@
 /* Importar fuentes - debe ir antes de todo lo demás */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600&display=swap');
 
-/* Importar Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Variables CSS globales */
 :root {
   --doc-text: #1a1a1a;
@@ -16,6 +11,8 @@
   --doc-border: #cccccc;
   --doc-cta: #2c3e50;
   --doc-link: #1a1a1a;
+  --doc-alert-bg: #fff5f5;
+  --doc-alert-border: #e53e3e;
 }
 
 /* Reset */
@@ -47,9 +44,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--doc-text);
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.625rem; }
-h3 { font-size: 1.25rem; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
 h4 { font-size: 1.125rem; }
 h5 { font-size: 1rem; }
 h6 { font-size: 0.875rem; }
@@ -148,11 +145,11 @@ select,
 textarea {
   width: 100%;
   max-width: 100%;
-  padding: 0.75rem;
+  padding: 1rem;
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
   font-size: 16px;
   border: 1px solid var(--doc-border);
-  background-color: var(--doc-bg-primary);
+  background-color: #fafafa;
   color: var(--doc-text);
   border-radius: 2px;
   transition: border-color 0.2s ease;
@@ -177,8 +174,8 @@ textarea:disabled {
 /* Checkbox y radio */
 input[type="checkbox"],
 input[type="radio"] {
-  width: 1rem;
-  height: 1rem;
+  width: 1.125rem;
+  height: 1.125rem;
   margin-right: 0.5rem;
   cursor: pointer;
   accent-color: var(--doc-cta);
@@ -191,10 +188,12 @@ input[type="reset"],
 input[type="button"] {
   background-color: var(--doc-cta);
   color: white;
-  padding: 0.875rem 2rem;
+  padding: 1.25rem 2rem;
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   border: none;
   border-radius: 2px;
   cursor: pointer;
@@ -222,7 +221,7 @@ input[type="submit"]:disabled {
 
 /* Utility classes */
 .max-w-doc {
-  max-width: 680px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -257,13 +256,33 @@ input[type="submit"]:disabled {
     background-color: white;
     color: black;
   }
-  
+
   a {
     text-decoration: underline;
   }
-  
+
   button,
   form {
     display: none;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .max-w-doc {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .grid-2-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4-columns {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -4,13 +4,9 @@ titulo: "SMS Infrastructure"
 tipo: "encabezado"
 tonalidad: "informe-riesgos"
 backgroundColor: "primary"
-showSeparator: true
+showSeparator: false
 ---
 
-# SMS Infrastructure
+# Infraestructura SMS con Diligencia RGPD/LSSI
 
-Infraestructura técnica de mensajería con diligencia RGPD/LSSI. Sin claims. Sin promesas. Solo definición.
-
-Este documento describe un servicio de envío de SMS transaccional para negocios locales con verificación Lista Robinson, trazabilidad RGPD y cumplimiento normativo español.
-
-No es marketing. Es infraestructura legal.
+Especificación de protocolos de mensajería masiva, marcos de responsabilidad y criterios de admisión para la comunicación comercial local.

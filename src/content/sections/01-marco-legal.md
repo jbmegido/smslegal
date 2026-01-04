@@ -29,5 +29,3 @@ El envío de comunicaciones comerciales por SMS en España está regulado por:
 La Agencia Española de Protección de Datos (AEPD) puede imponer sanciones de hasta **20 millones de euros** o el **4% de la facturación anual global** del ejercicio anterior (lo que sea mayor) por vulneraciones graves del RGPD.
 
 El envío no consentido de comunicaciones comerciales se considera infracción grave según el artículo 38.3.d) de la LSSI, con multas de hasta **150.000 euros**.
-
-**Esta plataforma no asume responsabilidad legal por el uso indebido del servicio.** El cliente es el único responsable del cumplimiento normativo.

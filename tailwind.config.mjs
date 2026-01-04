@@ -29,9 +29,17 @@ export default {
       },
       spacing: {
         '18': '4.5rem',
+        '20': '5rem',
         '88': '22rem',
         '100': '25rem',
-        '120': '30rem'
+        '120': '30rem',
+        'section': '5rem'
+      },
+      padding: {
+        'section': '5rem'
+      },
+      margin: {
+        'section': '5rem'
       }
     }
   },

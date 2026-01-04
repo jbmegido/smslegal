@@ -1,447 +1,355 @@
 ---
-import { getCollection } from 'astro:content';
 import DocumentoBase from '../layouts/DocumentoBase.astro';
-import FormularioSolicitud from '../components/FormularioSolicitud.astro';
-import { sortSections } from '../utils/sectionHelpers';
 
-const sections = await getCollection('sections');
-const sortedSections = sortSections(sections);
-
-const title = "SMS Legal - Infraestructura SMS con diligencia RGPD/LSSI";
-const description = "Servicio técnico de envío SMS para negocios locales con verificación Lista Robinson y trazabilidad RGPD. Sin claims, sin promesas. Solo infraestructura legal.";
-
-const professionalServiceSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "SMS Infrastructure",
-  "description": description,
-  "url": "https://smslegal.es",
-  "areaServed": {
-    "@type": "Country",
-    "name": "España"
-  },
-  "priceRange": "€€"
-};
-
-const offerSchema = {
-  "@context": "https://schema.org",
-  "@type": "Offer",
-  "name": "Plan Único SMS Infrastructure",
-  "description": "Envío de hasta 10.000 SMS/mes con verificación Lista Robinson y compliance RGPD",
-  "price": "199",
-  "priceCurrency": "EUR",
-  "availability": "https://schema.org/PreOrder"
-};
----@
+const title = "Infraestructura SMS con Diligencia RGPD/LSSI";
+const description = "Especificación de protocolos de mensajería masiva, marcos de responsabilidad y criterios de admisión para la comunicación comercial local.";
+---
 
 <DocumentoBase title={title} description={description}>
-  <!-- Schema.org JSON-LD -->
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(professionalServiceSchema)} />
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
-
-  <!-- Header -->
-  <header style="padding: 2rem; text-align: center; max-width: 720px; margin: 0 auto;">
-    <p style="font-size: 0.75rem; color: #4a4a4a; margin-bottom: 0.5rem;">
-      Documento técnico — SMS Legal
-    </p>
-    <p style="font-size: 0.75rem; color: #4a4a4a; margin-bottom: 3rem;">
-      Versión: 2025.01
-    </p>
-    <h1 style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 3rem; font-weight: 600; line-height: 1.2; margin-bottom: 2rem; color: #1a1a1a;">
-      Infraestructura SMS con Diligencia RGPD/LSSI
-    </h1>
-    <div style="border-left: 4px solid #e0e0e0; padding-left: 1.5rem; margin-top: 2rem; text-align: left;">
-      <p style="font-style: italic; color: #4a4a4a; font-size: 1.125rem; line-height: 1.6;">
-        Especificación de protocolos de mensajería masiva, marcos de 
-        responsabilidad y criterios de admisión para la comunicación comercial local.
+  <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 2rem auto; max-width: 720px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <header>
+      <p style="font-size: 0.75rem; color: #4a4a4a; margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+        Documento técnico — SMS Legal
       </p>
-    </div>
-  </header>
+      <p style="font-size: 0.75rem; color: #4a4a4a; margin-bottom: 3rem; font-family: 'IBM Plex Sans', sans-serif;">
+        Versión: 2025.01
+      </p>
+      <h1 style="font-family: 'IBM Plex Serif', serif; font-size: 3rem; font-weight: 600; line-height: 1.2; margin-bottom: 2rem; color: #1a1a1a;">
+        Infraestructura SMS con Diligencia RGPD/LSSI
+      </h1>
+      <div style="border-left: 4px solid #e0e0e0; padding-left: 1.5rem; margin-top: 2rem;">
+        <p style="font-style: italic; color: #4a4a4a; font-size: 1.125rem; line-height: 1.6; font-family: 'IBM Plex Sans', sans-serif;">
+          Especificación de protocolos de mensajería masiva, marcos de 
+          responsabilidad y criterios de admisión para la comunicación comercial local.
+        </p>
+      </div>
+    </header>
 
-  <!-- Contenedor principal -->
-  <main style="padding: 2rem; max-width: 720px; margin: 0 auto;">
-    <!-- Secciones de contenido -->
-    {sortedSections.map(async (section) => {
-      const { Content } = await section.render();
-      const isFormularioSection = section.data.tipo === 'formulario-cta';
-      
-      // Sección II - Marco Normativo con caja de alerta
-      if (section.data.titulo === "I. Marco Normativo Aplicable") {
-        return (
-          <section style="margin-bottom: 6rem;">
-            <article class="prose-doc">
-              <Content />
-            </article>
-            <!-- Caja de alerta -->
-            <div style="background: #fff5f5; border-left: 4px solid #e53e3e; padding: 1.5rem; margin: 2rem 0;">
-              <p style="margin: 0; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; 
-                 letter-spacing: 0.05em; color: #c53030; margin-bottom: 0.75rem;">
-                • ALERTA DE CUMPLIMIENTO
+    <section style="margin-top: 6rem;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">SECCIÓN I - OBJETO</h2>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        El presente memorando detalla los requisitos operativos y técnicos para el 
+        despliegue de una pasarela de mensajería SMS diseñada específicamente para 
+        mitigar riesgos sancionadores en el territorio nacional. Se enfoca en la 
+        automatización del consentimiento y la trazabilidad del derecho de oposición.
+      </p>
+    </section>
+
+    <section style="margin-top: 6rem;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">SECCIÓN II - MARCO NORMATIVO APLICABLE</h2>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        Las operaciones de mensajería técnica y comercial se rigen por el marco jurídico vigente, asegurando la trazabilidad en cada envío:
+      </p>
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li><strong>RGPD:</strong> Reglamento General de Protección de Datos (Art. 6, 7, 21).</li>
+        <li><strong>LSSI-CE:</strong> Ley de Servicios de la Sociedad de la Información (Art. 36.1).</li>
+        <li><strong>LOPDGDD:</strong> Ley Orgánica de Protección de Datos y Garantía de Derechos Digitales.</li>
+        <li><strong>AEPD:</strong> Guías y criterios de la Agencia Española de Protección de Datos.</li>
+      </ul>
+      <div style="background: #fff5f5; border-left: 4px solid #e53e3e; padding: 1.5rem; margin: 2rem 0;">
+        <p style="margin: 0; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; 
+           letter-spacing: 0.05em; color: #c53030; margin-bottom: 0.75rem; font-family: 'IBM Plex Sans', sans-serif;">
+          • ALERTA DE CUMPLIMIENTO
+        </p>
+        <p style="margin: 0; font-style: italic; color: #4a4a4a; font-size: 0.9375rem; font-family: 'IBM Plex Sans', sans-serif;">
+          La ausencia de consentimiento explícito (Opt-in) o la falta de un sistema 
+          de baja gratuito (STOP) son las causas principales de sanciones de la AEPD, 
+          las cuales pueden alcanzar cuantías de hasta el 4% de la facturación global.
+        </p>
+      </div>
+    </section>
+
+    <section style="margin-top: 6rem;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">SECCIÓN III - CRITERIOS DE ADMISIÓN</h2>
+      <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+        <!-- Columna izquierda: PERFILES ADMITIDOS -->
+        <div style="background: #f8f9fa; padding: 2rem; border: 1px solid #e0e0e0;">
+          <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
+             letter-spacing: 0.05em; color: #2c3e50; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+            PERFILES ADMITIDOS
+          </h4>
+          <ul style="list-style: none; padding: 0; font-family: 'IBM Plex Sans', sans-serif;">
+            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; font-size: 0.9375rem;">
+              <span style="color: #2c3e50; font-size: 1.125rem;">✓</span>
+              <span>Base de datos de clientes propios</span>
+            </li>
+            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; font-size: 0.9375rem;">
+              <span style="color: #2c3e50; font-size: 1.125rem;">✓</span>
+              <span>Relación contractual previa (cliente de servicios)</span>
+            </li>
+            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; font-size: 0.9375rem;">
+              <span style="color: #2c3e50; font-size: 1.125rem;">✓</span>
+              <span>Consentimiento expreso documentado</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Columna derecha: PERFILES RECHAZADOS -->
+        <div style="background: #ffffff; padding: 2rem; border: 1px solid #e0e0e0;">
+          <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
+             letter-spacing: 0.05em; color: #e53e3e; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+            PERFILES RECHAZADOS
+          </h4>
+          <ul style="list-style: none; padding: 0; font-family: 'IBM Plex Sans', sans-serif;">
+            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; font-size: 0.9375rem;">
+              <span style="color: #e53e3e; font-size: 1.125rem;">×</span>
+              <span>Criptoactivos, apuestas o juegos de azar</span>
+            </li>
+            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; font-size: 0.9375rem;">
+              <span style="color: #e53e3e; font-size: 1.125rem;">×</span>
+              <span>Pharma o suplementos sin receta</span>
+            </li>
+            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; font-size: 0.9375rem;">
+              <span style="color: #e53e3e; font-size: 1.125rem;">×</span>
+              <span>Financiero sin regulación registrada</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 6rem;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">SECCIÓN IV - ESPECIFICACIONES TÉCNICAS</h2>
+      <div style="border: 3px solid #1a1a1a; padding: 0; margin: 3rem 0;">
+        <!-- Etiqueta superior -->
+        <div style="background: #1a1a1a; color: white; padding: 0.5rem 1rem;">
+          <p style="margin: 0; font-size: 0.75rem; font-weight: 600; 
+             text-transform: uppercase; letter-spacing: 0.05em; font-family: 'IBM Plex Sans', sans-serif;">
+            TARIFA STANDARD A2P
+          </p>
+        </div>
+        
+        <!-- Contenido principal -->
+        <div style="padding: 3rem 2rem;">
+          <p style="font-size: 3rem; font-weight: 600; margin: 0; line-height: 1; font-family: 'IBM Plex Sans', sans-serif; color: #1a1a1a;">
+            199,00 €
+            <span style="font-size: 1.25rem; font-weight: 400; color: #4a4a4a;">
+              / mes
+            </span>
+          </p>
+          <p style="font-size: 0.875rem; color: #4a4a4a; margin-top: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+            IVA NO INCLUIDO · FACTURACIÓN SEPA
+          </p>
+          
+          <!-- Grid de specs -->
+          <div class="grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); 
+             gap: 2rem; margin-top: 3rem; padding-top: 2rem; 
+             border-top: 1px solid #e0e0e0;">
+            <div>
+              <p style="font-size: 0.75rem; text-transform: uppercase; 
+                 color: #4a4a4a; margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">VOLUMEN</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; margin: 0; font-size: 0.875rem; color: #1a1a1a;">
+                6.000 SMS / mes
               </p>
-              <p style="margin: 0; font-style: italic; color: #4a4a4a; font-size: 0.9375rem;">
-                La ausencia de consentimiento explícito (Opt-in) o la falta de un sistema 
-                de baja gratuito (STOP) son las causas principales de sanciones de la AEPD, 
-                las cuales pueden alcanzar cuantías de hasta el 4% de la facturación global.
+            </div>
+            <div>
+              <p style="font-size: 0.75rem; text-transform: uppercase; 
+                 color: #4a4a4a; margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">EXCESOS</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; margin: 0; font-size: 0.875rem; color: #1a1a1a;">
+                0,045 € / ud
               </p>
             </div>
-          </section>
-        );
-      }
-      
-      // Sección III - Criterios de Admisión con layout de dos columnas
-      else if (section.data.titulo === "III. Criterios de Admisión") {
-        return (
-          <section style="margin-bottom: 6rem;">
-            <article class="prose-doc">
-              <Content />
-            </article>
-            <!-- Layout dos columnas -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-              <!-- Columna izquierda: PERFILES ADMITIDOS -->
-              <div style="background: #f8f9fa; padding: 2rem; border: 1px solid #e0e0e0;">
-                <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
-                   letter-spacing: 0.05em; color: #2c3e50; margin-bottom: 1.5rem;">
-                  PERFILES ADMITIDOS
-                </h4>
-                <ul style="list-style: none; padding: 0;">
-                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                    <span style="color: #2c3e50; font-size: 1.125rem;">✓</span>
-                    <span>Base de datos de clientes propios</span>
-                  </li>
-                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                    <span style="color: #2c3e50; font-size: 1.125rem;">✓</span>
-                    <span>Relación contractual previa (cliente de servicios)</span>
-                  </li>
-                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                    <span style="color: #2c3e50; font-size: 1.125rem;">✓</span>
-                    <span>Consentimiento expreso documentado</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <!-- Columna derecha: PERFILES RECHAZADOS -->
-              <div style="background: #ffffff; padding: 2rem; border: 1px solid #e0e0e0;">
-                <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
-                   letter-spacing: 0.05em; color: #e53e3e; margin-bottom: 1.5rem;">
-                  PERFILES RECHAZADOS
-                </h4>
-                <ul style="list-style: none; padding: 0;">
-                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                    <span style="color: #e53e3e; font-size: 1.125rem;">×</span>
-                    <span>Criptoactivos, apuestas o juegos de azar</span>
-                  </li>
-                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                    <span style="color: #e53e3e; font-size: 1.125rem;">×</span>
-                    <span>Pharma o suplementos sin receta</span>
-                  </li>
-                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                    <span style="color: #e53e3e; font-size: 1.125rem;">×</span>
-                    <span>Financiero sin regulación registrada</span>
-                  </li>
-                </ul>
-              </div>
+            <div>
+              <p style="font-size: 0.75rem; text-transform: uppercase; 
+                 color: #4a4a4a; margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">ROBINSON</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; margin: 0; font-size: 0.875rem; color: #1a1a1a;">
+                Cotejo Diario
+              </p>
             </div>
-          </section>
-        );
-      }
-      
-      // Sección V - Especificaciones Técnicas con card de tarifa
-      else if (section.data.titulo === "V. Especificaciones Técnicas y Tarifas") {
-        return (
-          <section style="margin-bottom: 6rem;">
-            <article class="prose-doc">
-              <Content />
-            </article>
-            <!-- Card de especificaciones -->
-            <div style="border: 3px solid #1a1a1a; padding: 0; margin: 3rem 0;">
-              <!-- Etiqueta superior -->
-              <div style="background: #1a1a1a; color: white; padding: 0.5rem 1rem;">
-                <p style="margin: 0; font-size: 0.75rem; font-weight: 600; 
-                   text-transform: uppercase; letter-spacing: 0.05em;">
-                  TARIFA STANDARD A2P
-                </p>
-              </div>
-              
-              <!-- Contenido principal -->
-              <div style="padding: 3rem 2rem;">
-                <p style="font-size: 3rem; font-weight: 600; margin: 0; line-height: 1;">
-                  199,00 €
-                  <span style="font-size: 1.25rem; font-weight: 400; color: #4a4a4a;">
-                    / mes
-                  </span>
-                </p>
-                <p style="font-size: 0.875rem; color: #4a4a4a; margin-top: 0.5rem;">
-                  IVA NO INCLUIDO · FACTURACIÓN SEPA
-                </p>
-                
-                <!-- Grid de specs -->
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); 
-                   gap: 2rem; margin-top: 3rem; padding-top: 2rem; 
-                   border-top: 1px solid #e0e0e0;">
-                  <div>
-                    <p style="font-size: 0.75rem; text-transform: uppercase; 
-                       color: #4a4a4a; margin-bottom: 0.5rem;">VOLUMEN</p>
-                    <p style="font-family: 'IBM Plex Mono'; font-weight: 600; margin: 0;">
-                      6.000 SMS / mes
-                    </p>
-                  </div>
-                  <div>
-                    <p style="font-size: 0.75rem; text-transform: uppercase; 
-                       color: #4a4a4a; margin-bottom: 0.5rem;">EXCESOS</p>
-                    <p style="font-family: 'IBM Plex Mono'; font-weight: 600; margin: 0;">
-                      0,045 € / ud
-                    </p>
-                  </div>
-                  <div>
-                    <p style="font-size: 0.75rem; text-transform: uppercase; 
-                       color: #4a4a4a; margin-bottom: 0.5rem;">ROBINSON</p>
-                    <p style="font-family: 'IBM Plex Mono'; font-weight: 600; margin: 0;">
-                      Cotejo Diario
-                    </p>
-                  </div>
-                  <div>
-                    <p style="font-size: 0.75rem; text-transform: uppercase; 
-                       color: #4a4a4a; margin-bottom: 0.5rem;">RETENCIÓN</p>
-                    <p style="font-family: 'IBM Plex Mono'; font-weight: 600; margin: 0;">
-                      24 Meses Logs
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <p style="font-size: 0.75rem; text-transform: uppercase; 
+                 color: #4a4a4a; margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">RETENCIÓN</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; margin: 0; font-size: 0.875rem; color: #1a1a1a;">
+                24 Meses Logs
+              </p>
             </div>
-          </section>
-        );
-      }
-      
-      // Sección VI - Proceso de Activación con números grandes
-      else if (section.data.titulo === "VI. Proceso de Activación") {
-        return (
-          <section style="margin-bottom: 6rem;">
-            <article class="prose-doc">
-              <Content />
-            </article>
-            <!-- Proceso activación -->
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin: 3rem 0;">
-              <div style="text-align: center;">
-                <p style="font-size: 4rem; font-weight: 300; color: #e0e0e0; 
-                   line-height: 1; margin-bottom: 1rem;">01</p>
-                <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
-                   letter-spacing: 0.05em; margin-bottom: 0.75rem;">SOLICITUD</h4>
-                <p style="font-size: 0.9375rem; color: #4a4a4a; line-height: 1.5;">
-                  Envío de datos mediante formulario IX.
-                </p>
-              </div>
-              <div style="text-align: center;">
-                <p style="font-size: 4rem; font-weight: 300; color: #e0e0e0; 
-                   line-height: 1; margin-bottom: 1rem;">02</p>
-                <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
-                   letter-spacing: 0.05em; margin-bottom: 0.75rem;">AUDITORÍA</h4>
-                <p style="font-size: 0.9375rem; color: #4a4a4a; line-height: 1.5;">
-                  Validación de sector y origen de datos (24-48h).
-                </p>
-              </div>
-              <div style="text-align: center;">
-                <p style="font-size: 4rem; font-weight: 300; color: #e0e0e0; 
-                   line-height: 1; margin-bottom: 1rem;">03</p>
-                <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
-                   letter-spacing: 0.05em; margin-bottom: 0.75rem;">DEPLOY</h4>
-                <p style="font-size: 0.9375rem; color: #4a4a4a; line-height: 1.5;">
-                  Alta técnica y entrega de accesos.
-                </p>
-              </div>
-            </div>
-          </section>
-        );
-      }
-      
-      // Sección de formulario
-      else if (isFormularioSection) {
-        return (
-          <section style="margin-bottom: 6rem;">
-            <article class="prose-doc">
-              <Content />
-            </article>
-            <FormularioSolicitud />
-          </section>
-        );
-      }
-      
-      // Secciones normales
-      else {
-        return (
-          <section style="margin-bottom: 6rem;">
-            <article class="prose-doc">
-              <Content />
-            </article>
-          </section>
-        );
-      }
-    })}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 6rem;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">SECCIÓN V - PROCESO DE ACTIVACIÓN</h2>
+      <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin: 3rem 0;">
+        <div style="text-align: center;">
+          <p style="font-size: 4rem; font-weight: 300; color: #e0e0e0; 
+             line-height: 1; margin-bottom: 1rem; font-family: 'IBM Plex Sans', sans-serif;">01</p>
+          <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
+             letter-spacing: 0.05em; margin-bottom: 0.75rem; font-family: 'IBM Plex Sans', sans-serif; color: #1a1a1a;">SOLICITUD</h4>
+          <p style="font-size: 0.9375rem; color: #4a4a4a; line-height: 1.5; font-family: 'IBM Plex Sans', sans-serif;">
+            Envío de datos mediante formulario IX.
+          </p>
+        </div>
+        <div style="text-align: center;">
+          <p style="font-size: 4rem; font-weight: 300; color: #e0e0e0; 
+             line-height: 1; margin-bottom: 1rem; font-family: 'IBM Plex Sans', sans-serif;">02</p>
+          <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
+             letter-spacing: 0.05em; margin-bottom: 0.75rem; font-family: 'IBM Plex Sans', sans-serif; color: #1a1a1a;">AUDITORÍA</h4>
+          <p style="font-size: 0.9375rem; color: #4a4a4a; line-height: 1.5; font-family: 'IBM Plex Sans', sans-serif;">
+            Validación de sector y origen de datos (24-48h).
+          </p>
+        </div>
+        <div style="text-align: center;">
+          <p style="font-size: 4rem; font-weight: 300; color: #e0e0e0; 
+             line-height: 1; margin-bottom: 1rem; font-family: 'IBM Plex Sans', sans-serif;">03</p>
+          <h4 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
+             letter-spacing: 0.05em; margin-bottom: 0.75rem; font-family: 'IBM Plex Sans', sans-serif; color: #1a1a1a;">DEPLOY</h4>
+          <p style="font-size: 0.9375rem; color: #4a4a4a; line-height: 1.5; font-family: 'IBM Plex Sans', sans-serif;">
+            Alta técnica y entrega de accesos.
+          </p>
+        </div>
+      </div>
+      <!-- Caja negra enfática -->
+      <div style="background: #1a1a1a; color: white; padding: 1.5rem 2rem; 
+         text-align: center; margin-top: 2rem;">
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.875rem; 
+           letter-spacing: 0.05em; margin: 0;">
+          SIN DEMOSTRACIONES · SIN LLAMADAS COMERCIALES · EFICIENCIA OPERATIVA ESTRICTA
+        </p>
+      </div>
+    </section>
+
+    <section style="margin-top: 6rem;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">SECCIÓN VI - FORMULARIO DE SOLICITUD</h2>
+      <form name="solicitud-acceso" method="POST" data-netlify="true" netlify-honeypot="bot-field" 
+        style="border: 1px solid #cccccc; padding: 2rem; max-width: 600px; margin: 3rem auto;">
+        <input type="hidden" name="form-name" value="solicitud-acceso" />
+        <p style="display: none;">
+          <label>Don't fill: <input name="bot-field" /></label>
+        </p>
+        
+        <!-- Campo: Entidad/Empresa -->
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; font-size: 0.75rem; font-weight: 600; 
+             text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; 
+             margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+            ENTIDAD / EMPRESA
+          </label>
+          <input type="text" name="empresa" placeholder="Ej: Joyería Martínez SL" required
+             style="width: 100%; padding: 1rem; border: 1px solid #cccccc; 
+             font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; background: #fafafa; box-sizing: border-box; color: #1a1a1a;">
+        </div>
+        
+        <!-- Campo: Email -->
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; font-size: 0.75rem; font-weight: 600; 
+             text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; 
+             margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+            CORREO TÉCNICO
+          </label>
+          <input type="email" name="email" placeholder="contacto@empresa.es" required
+             style="width: 100%; padding: 1rem; border: 1px solid #cccccc; 
+             font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; background: #fafafa; box-sizing: border-box; color: #1a1a1a;">
+        </div>
+        
+        <!-- Campo: Sector -->
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; font-size: 0.75rem; font-weight: 600; 
+             text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; 
+             margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+            SECTOR / ACTIVIDAD
+          </label>
+          <select name="sector" required
+             style="width: 100%; padding: 1rem; border: 1px solid #cccccc; 
+             font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; background: #fafafa; box-sizing: border-box; color: #1a1a1a;">
+            <option value="">— Seleccionar —</option>
+            <option value="retail">Retail / Comercio</option>
+            <option value="servicios">Servicios Profesionales</option>
+            <option value="turismo">Turismo / Hostelería</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        
+        <!-- Checkbox con disclaimer -->
+        <div style="background: #f8f9fa; border: 1px solid #cccccc; 
+           padding: 1.5rem; margin: 2rem 0;">
+          <label style="display: flex; gap: 1rem; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" name="disclaimer" required style="margin-top: 0.25rem; 
+               width: 1.125rem; height: 1.125rem; flex-shrink: 0;">
+            <span style="font-style: italic; font-size: 0.9375rem; color: #4a4a4a; line-height: 1.6; font-family: 'IBM Plex Sans', sans-serif;">
+              Declaro que la base de datos es legítima, obtenida mediante relación 
+              contractual o consentimiento expreso, y asumo total responsabilidad sobre 
+              el cumplimiento de RGPD y LSSI-CE.
+            </span>
+          </label>
+        </div>
+        
+        <!-- Disclaimer técnico -->
+        <p style="font-size: 0.75rem; color: #4a4a4a; text-align: center; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+          Este servicio proporciona infraestructura técnica, no asesoramiento legal. 
+          Para determinar relación jurídica exacta conforme RGPD, consulte asesor legal especializado.
+        </p>
+        
+        <!-- Botón -->
+        <button type="submit" style="width: 100%; background: #1a1a1a; color: white; 
+           padding: 1.25rem 2rem; border: none; font-family: 'IBM Plex Sans', sans-serif; 
+           font-size: 0.875rem; font-weight: 600; text-transform: uppercase; 
+           letter-spacing: 0.1em; cursor: pointer;">
+          ENVIAR PARA VALIDACIÓN TÉCNICA
+        </button>
+        <p style="text-align: center; margin-top: 1.5rem; font-size: 0.875rem; 
+           color: #4a4a4a; font-family: 'IBM Plex Sans', sans-serif;">
+          RESPUESTA EN 24h
+        </p>
+      </form>
+    </section>
+
+    <footer style="border-top: 1px solid #e0e0e0; margin-top: 6rem; 
+       padding: 3rem 0; background: #fafafa;">
+      <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-family: 'IBM Plex Serif', serif; color: #1a1a1a;">SMS Legal</h3>
+        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; 
+           color: #4a4a4a; line-height: 1.8; margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
+          INFRAESTRUCTURA DE ALTA DISPONIBILIDAD PARA EL CUMPLIMIENTO NORMATIVO.
+        </p>
+        
+        <nav style="margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
+          <a href="/privacidad" style="font-size: 0.75rem; text-transform: uppercase; 
+             letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
+            PRIVACIDAD
+          </a>
+          <a href="/terminos" style="font-size: 0.75rem; text-transform: uppercase; 
+             letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
+            TÉRMINOS
+          </a>
+          <a href="/aviso-legal" style="font-size: 0.75rem; text-transform: uppercase; 
+             letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
+            AVISO LEGAL
+          </a>
+        </nav>
+        
+        <p style="font-size: 0.6875rem; color: #4a4a4a; margin-bottom: 1rem; font-family: 'IBM Plex Sans', sans-serif;">
+          © 2025 SMS LEGAL
+        </p>
+        <p style="font-size: 0.6875rem; text-transform: uppercase; 
+           letter-spacing: 0.1em; color: #4a4a4a; font-family: 'IBM Plex Sans', sans-serif;">
+          NO COOKIES · NO TRACKING · PURE DOCUMENT
+        </p>
+      </div>
+    </footer>
   </main>
-
-  <!-- Footer -->
-  <footer style="border-top: 1px solid #e0e0e0; margin-top: 6rem; 
-     padding: 3rem 0; background: #fafafa;">
-    <div style="max-width: 720px; margin: 0 auto; padding: 0 2rem; text-align: center;">
-      <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">SMS Legal</h3>
-      <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; 
-         color: #4a4a4a; line-height: 1.8; margin-bottom: 2rem;">
-        INFRAESTRUCTURA DE ALTA DISPONIBILIDAD PARA EL CUMPLIMIENTO NORMATIVO.
-      </p>
-      
-      <nav style="margin-bottom: 2rem;">
-        <a href="/privacidad" style="font-size: 0.75rem; text-transform: uppercase; 
-           letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
-          PRIVACIDAD
-        </a>
-        <a href="/terminos" style="font-size: 0.75rem; text-transform: uppercase; 
-           letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
-          TÉRMINOS
-        </a>
-        <a href="/aviso-legal" style="font-size: 0.75rem; text-transform: uppercase; 
-           letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
-          AVISO LEGAL
-        </a>
-      </nav>
-      
-      <p style="font-size: 0.6875rem; color: #4a4a4a; margin-bottom: 1rem;">
-        © 2025 SMS LEGAL
-      </p>
-      <p style="font-size: 0.6875rem; text-transform: uppercase; 
-         letter-spacing: 0.1em; color: #4a4a4a;">
-        NO COOKIES · NO TRACKING · PURE DOCUMENT
-      </p>
-    </div>
-  </footer>
-
-  <!-- Caja negra enfática -->
-  <div style="background: #1a1a1a; color: white; padding: 1.5rem 2rem; 
-     text-align: center; margin-top: 2rem;">
-    <p style="font-family: 'IBM Plex Mono'; font-size: 0.875rem; 
-       letter-spacing: 0.05em; margin: 0;">
-      SIN DEMOSTRACIONES · SIN LLAMADAS COMERCIALES · EFICIENCIA OPERATIVA ESTRICTA
-    </p>
-  </div>
 </DocumentoBase>
 
 <style is:global>
-  /* Estilos prose-doc para contenido markdown */
-  .prose-doc {
-    color: var(--doc-text);
+  body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
   }
-
-  .prose-doc h1 {
-    font-size: 3rem;
-    font-family: 'IBM Plex Serif', Georgia, serif;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    color: var(--doc-text);
-  }
-
-  .prose-doc h2 {
-    font-size: 2rem;
-    font-family: 'IBM Plex Serif', Georgia, serif;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-    margin-top: 0;
-    color: var(--doc-text);
-  }
-
-  .prose-doc h3 {
-    font-size: 1.5rem;
-    font-family: 'IBM Plex Serif', Georgia, serif;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
-    margin-top: 1.5rem;
-    color: var(--doc-text);
-  }
-
-  .prose-doc p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-
-  .prose-doc ul,
-  .prose-doc ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-  }
-
-  .prose-doc li {
-    margin-bottom: 0.5rem;
-    line-height: 1.7;
-  }
-
-  .prose-doc strong {
-    font-weight: 600;
-    color: var(--doc-text);
-  }
-
-  .prose-doc a {
-    color: var(--doc-link);
-    text-decoration: underline;
-  }
-
-  .prose-doc a:hover {
-    opacity: 0.8;
-  }
-
-  .prose-doc code {
-    font-family: 'IBM Plex Mono', 'Courier New', monospace;
-    font-size: 14px;
-    background-color: var(--doc-bg-alt);
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-  }
-
-  .prose-doc hr {
-    border: 0;
-    border-top: 1px solid var(--doc-border);
-    margin: 2rem 0;
-  }
-
-  .prose-doc blockquote {
-    padding-left: 1.5rem;
-    border-left: 4px solid var(--doc-border);
-    color: var(--doc-secondary);
-    font-style: italic;
-  }
-
-  .prose-doc table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-  }
-
-  .prose-doc th,
-  .prose-doc td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid var(--doc-border);
-  }
-
-  .prose-doc th {
-    background-color: var(--doc-bg-alt);
-    font-weight: 600;
-  }
-
-  /* Responsive para grids */
+  /* Responsive overrides */
   @media (max-width: 768px) {
-    .grid-2-columns {
-      grid-template-columns: 1fr;
+    main {
+      margin: 1rem !important;
+      padding: 2rem 1rem !important;
     }
-
-    .grid-3-columns {
-      grid-template-columns: 1fr;
+    header h1 {
+      font-size: 2.25rem !important;
     }
-
-    .grid-4-columns {
-      grid-template-columns: repeat(2, 1fr);
+    .grid-2, .grid-3 {
+      grid-template-columns: 1fr !important;
+    }
+    .grid-4 {
+      grid-template-columns: repeat(2, 1fr) !important;
     }
   }
 </style>

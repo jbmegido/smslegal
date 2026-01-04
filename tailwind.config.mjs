@@ -4,21 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        doc: {
-          text: '#1a1a1a',
-          secondary: '#4a4a4a',
-          bg: {
-            primary: '#ffffff',
-            alt: '#f8f9fa',
-            dark: '#f0f0f0'
-          },
-          border: '#cccccc',
-          cta: '#2c3e50',
-          link: '#1a1a1a'
-        }
+        'doc-text': '#1a1a1a',
+        'doc-secondary': '#4a4a4a',
+        'doc-bg-primary': '#ffffff',
+        'doc-bg-alt': '#f8f9fa',
+        'doc-bg-dark': '#f0f0f0',
+        'doc-border': '#cccccc',
+        'doc-cta': '#2c3e50',
+        'doc-link': '#1a1a1a'
       },
       fontFamily: {
-        sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+        sans: ['IBM Plex Sans', 'system-ui', '-apple-system', 'sans-serif'],
         serif: ['IBM Plex Serif', 'Georgia', 'serif'],
         mono: ['IBM Plex Mono', 'Courier New', 'monospace']
       },
@@ -29,11 +25,13 @@ export default {
         'doc-mono': ['14px', { lineHeight: '1.6' }]
       },
       maxWidth: {
-        doc: '680px'
+        'doc': '680px'
       },
       spacing: {
-        'section': '100px',
-        'section-inner': '50px'
+        '18': '4.5rem',
+        '88': '22rem',
+        '100': '25rem',
+        '120': '30rem'
       }
     }
   },

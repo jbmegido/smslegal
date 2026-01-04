@@ -1,0 +1,20 @@
+---
+import { getBgColorClass } from '../utils/sectionHelpers';
+import SeparadorDiscrete from './SeparadorDiscrete.astro';
+
+interface Props {
+  backgroundColor?: 'primary' | 'alt' | 'dark';
+  showSeparator?: boolean;
+}
+
+const { backgroundColor = 'primary', showSeparator = true } = Astro.props;
+const bgClass = getBgColorClass(backgroundColor);
+---
+
+<section class={`${bgClass} py-section`}>
+  <div class="max-w-doc mx-auto px-6">
+    <slot />
+  </div>
+</section>
+
+{showSeparator && <SeparadorDiscrete />}

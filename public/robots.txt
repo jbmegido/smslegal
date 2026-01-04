@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smslegal.es/sitemap-index.xml

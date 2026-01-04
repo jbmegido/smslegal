@@ -1,0 +1,26 @@
+---
+interface Props {
+  items: string[];
+  type?: 'check' | 'cross' | 'dash' | 'numbered';
+}
+
+const { items, type = 'dash' } = Astro.props;
+
+const getSymbol = (type: string, index: number) => {
+  switch(type) {
+    case 'check': return '✓';
+    case 'cross': return '✗';
+    case 'numbered': return `${index + 1}.`;
+    default: return '-';
+  }
+};
+---
+
+<ul class="space-y-3 my-6 font-mono text-doc-mono">
+  {items.map((item, index) => (
+    <li class="flex gap-3">
+      <span class="flex-shrink-0 text-doc-secondary">{getSymbol(type, index)}</span>
+      <span class="flex-1">{item}</span>
+    </li>
+  ))}
+</ul>

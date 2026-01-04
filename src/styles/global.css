@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --doc-text: #1a1a1a;
+    --doc-secondary: #4a4a4a;
+    --doc-bg-primary: #ffffff;
+    --doc-bg-alt: #f8f9fa;
+    --doc-bg-dark: #f0f0f0;
+    --doc-border: #cccccc;
+    --doc-cta: #2c3e50;
+    --doc-link: #1a1a1a;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    color: var(--doc-text);
+    background-color: var(--doc-bg-primary);
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  code, pre, kbd, samp {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  a {
+    color: var(--doc-link);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}

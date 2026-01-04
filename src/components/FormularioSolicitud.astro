@@ -1,0 +1,182 @@
+---
+// Netlify Forms with prequalification
+---
+
+<div class="my-12 p-8 border border-doc-border bg-doc-bg-alt rounded-sm">
+  <h3 class="text-doc-subheading font-serif font-semibold mb-6">Formulario de Solicitud</h3>
+  
+  <form 
+    name="solicitud-acceso" 
+    method="POST" 
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    class="space-y-6"
+  >
+    <input type="hidden" name="form-name" value="solicitud-acceso" />
+    
+    <!-- Honeypot -->
+    <div class="hidden">
+      <label>
+        No rellenar si eres humano: <input name="bot-field" />
+      </label>
+    </div>
+
+    <!-- Nombre completo -->
+    <div>
+      <label for="nombre" class="block font-semibold mb-2">
+        Nombre completo <span class="text-red-600">*</span>
+      </label>
+      <input 
+        type="text" 
+        id="nombre" 
+        name="nombre" 
+        required
+        class="w-full px-4 py-2 border border-doc-border rounded-sm focus:outline-none focus:ring-2 focus:ring-doc-cta"
+      />
+    </div>
+
+    <!-- Email empresarial -->
+    <div>
+      <label for="email" class="block font-semibold mb-2">
+        Email empresarial <span class="text-red-600">*</span>
+      </label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required
+        class="w-full px-4 py-2 border border-doc-border rounded-sm focus:outline-none focus:ring-2 focus:ring-doc-cta"
+      />
+    </div>
+
+    <!-- Teléfono -->
+    <div>
+      <label for="telefono" class="block font-semibold mb-2">
+        Teléfono <span class="text-red-600">*</span>
+      </label>
+      <input 
+        type="tel" 
+        id="telefono" 
+        name="telefono" 
+        required
+        class="w-full px-4 py-2 border border-doc-border rounded-sm focus:outline-none focus:ring-2 focus:ring-doc-cta"
+      />
+    </div>
+
+    <!-- Nombre empresa -->
+    <div>
+      <label for="empresa" class="block font-semibold mb-2">
+        Nombre de la empresa <span class="text-red-600">*</span>
+      </label>
+      <input 
+        type="text" 
+        id="empresa" 
+        name="empresa" 
+        required
+        class="w-full px-4 py-2 border border-doc-border rounded-sm focus:outline-none focus:ring-2 focus:ring-doc-cta"
+      />
+    </div>
+
+    <!-- Tipo de negocio -->
+    <div>
+      <label for="tipo-negocio" class="block font-semibold mb-2">
+        Tipo de negocio <span class="text-red-600">*</span>
+      </label>
+      <select 
+        id="tipo-negocio" 
+        name="tipo-negocio" 
+        required
+        class="w-full px-4 py-2 border border-doc-border rounded-sm focus:outline-none focus:ring-2 focus:ring-doc-cta bg-white"
+      >
+        <option value="">Seleccione una opción</option>
+        <option value="restaurante">Restaurante/Cafetería</option>
+        <option value="clinica">Clínica/Centro médico</option>
+        <option value="gimnasio">Gimnasio/Centro deportivo</option>
+        <option value="taller">Taller mecánico</option>
+        <option value="inmobiliaria">Inmobiliaria</option>
+        <option value="otro-local">Otro negocio local</option>
+      </select>
+    </div>
+
+    <!-- Origen lista -->
+    <div>
+      <label for="origen-lista" class="block font-semibold mb-2">
+        Origen de su lista de contactos <span class="text-red-600">*</span>
+      </label>
+      <select 
+        id="origen-lista" 
+        name="origen-lista" 
+        required
+        class="w-full px-4 py-2 border border-doc-border rounded-sm focus:outline-none focus:ring-2 focus:ring-doc-cta bg-white"
+      >
+        <option value="">Seleccione una opción</option>
+        <option value="clientes-propios">Clientes propios (histórico)</option>
+        <option value="formulario-web">Formulario web propio</option>
+        <option value="telefono">Registro telefónico</option>
+        <option value="otro">Otro método con consentimiento</option>
+      </select>
+    </div>
+
+    <!-- Volumen contactos -->
+    <div>
+      <label for="volumen" class="block font-semibold mb-2">
+        Volumen aproximado de contactos <span class="text-red-600">*</span>
+      </label>
+      <select 
+        id="volumen" 
+        name="volumen" 
+        required
+        class="w-full px-4 py-2 border border-doc-border rounded-sm focus:outline-none focus:ring-2 focus:ring-doc-cta bg-white"
+      >
+        <option value="">Seleccione una opción</option>
+        <option value="<500">Menos de 500</option>
+        <option value="500-2000">500 - 2.000</option>
+        <option value="2000-5000">2.000 - 5.000</option>
+        <option value=">5000">Más de 5.000</option>
+      </select>
+    </div>
+
+    <!-- Checkboxes obligatorios -->
+    <div class="space-y-4 pt-4 border-t border-doc-border">
+      <div class="flex gap-3">
+        <input 
+          type="checkbox" 
+          id="declaro-titular" 
+          name="declaro-titular" 
+          required
+          class="mt-1 w-4 h-4 text-doc-cta border-doc-border rounded focus:ring-2 focus:ring-doc-cta"
+        />
+        <label for="declaro-titular" class="text-sm">
+          Declaro ser titular legítimo de la base de datos y haber obtenido consentimiento válido según RGPD de todos los contactos. <span class="text-red-600">*</span>
+        </label>
+      </div>
+
+      <div class="flex gap-3">
+        <input 
+          type="checkbox" 
+          id="he-leido" 
+          name="he-leido" 
+          required
+          class="mt-1 w-4 h-4 text-doc-cta border-doc-border rounded focus:ring-2 focus:ring-doc-cta"
+        />
+        <label for="he-leido" class="text-sm">
+          He leído los criterios de admisión y entiendo que soy el único responsable legal del uso del servicio. <span class="text-red-600">*</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Submit button -->
+    <div class="pt-6">
+      <button 
+        type="submit"
+        class="w-full bg-doc-cta text-white font-semibold py-4 px-8 rounded-sm hover:opacity-90 transition-opacity"
+      >
+        Solicitar acceso
+      </button>
+    </div>
+
+    <p class="text-sm text-doc-secondary text-center mt-4">
+      Su solicitud será evaluada en 3-5 días laborables. No se garantiza la admisión.
+    </p>
+  </form>
+</div>

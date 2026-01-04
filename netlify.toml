@@ -1,20 +1,10 @@
+# netlify.toml
+
 [build]
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "18"
-
-[[plugins]]
-  package = "@astrojs/netlify"
-
-[functions]
-  directory = "netlify/functions"
+command = "npm run build"
+publish = "dist"
 
 [[redirects]]
-  from = "/*"
-  to = "/404"
-  status = 404
-
-[context.production]
-  environment = { NODE_ENV = "production" }
+from = "/*"
+status = 404
+to = "/404"

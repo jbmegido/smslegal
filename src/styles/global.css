@@ -31,7 +31,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: var(--doc-text);
-  background-color: var(--doc-bg-primary);
+  background-color: var(--doc-bg-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

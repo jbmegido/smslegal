@@ -1,183 +1,463 @@
 ---
 import DocumentoBase from '../layouts/DocumentoBase.astro';
-import SeccionDocumental from '../components/SeccionDocumental.astro';
 
-const title = "Términos del Servicio - SMS Legal";
-const description = "Términos y condiciones de uso del servicio SMS Infrastructure";
+const title = 'Términos del Servicio - SMS Legal';
+const description = 'Términos del Servicio de SMS Legal - infraestructura SMS A2P con compliance RGPD/LSSI';
 ---
 
 <DocumentoBase title={title} description={description}>
-  <SeccionDocumental>
-    <article class="prose prose-doc max-w-none">
-      <h1>Términos del Servicio</h1>
-      
-      <p><strong>Última actualización:</strong> Enero 2025</p>
+  <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 2rem auto; max-width: 720px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <header>
+      <p style="font-size: 0.75rem; color: #4a4a4a; margin-bottom: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+        Documento técnico — SMS Legal
+      </p>
+      <p style="font-size: 0.75rem; color: #4a4a4a; margin-bottom: 3rem; font-family: 'IBM Plex Sans', sans-serif;">
+        Versión: 2025.01
+      </p>
+      <h1 style="font-family: 'IBM Plex Serif', serif; font-size: 3rem; font-weight: 600; line-height: 1.2; margin-bottom: 2rem; color: #1a1a1a;">
+        Términos del Servicio
+      </h1>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 2rem;">
+        <strong>Última actualización:</strong> Enero 2026
+      </p>
+      <hr style="border: none; border-top: 1px solid #cccccc; margin: 0;" />
+    </header>
 
-      <h2>1. Objeto</h2>
-      
-      <p>Los presentes Términos regulan el acceso y uso del servicio SMS Infrastructure, plataforma técnica de envío masivo de SMS con funcionalidades de compliance RGPD/LSSI.</p>
+    <section style="margin-top: 6rem;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">1. Objeto</h2>
 
-      <h2>2. Aceptación</h2>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        Los presentes Términos regulan el acceso y uso del servicio SMS Infrastructure, que consiste en:
+      </p>
 
-      <p>El uso del servicio implica la aceptación plena de estos Términos. Si no está de acuerdo, no debe contratar ni utilizar el servicio.</p>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        Provisión de infraestructura técnica para el envío programado de mensajes SMS a listas propias del cliente, con las siguientes funcionalidades automatizadas:
+      </p>
 
-      <h2>3. Capacidad legal</h2>
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Verificación contra Lista Robinson nacional (actualización diaria)</li>
+        <li>Gestión automática de palabras clave STOP/BAJA</li>
+        <li>Registro de remitente (Sender ID) ante operadoras</li>
+        <li>Logs de trazabilidad conservados 24 meses</li>
+        <li>Panel de consulta básico (entregados/rebotes/bajas)</li>
+      </ul>
 
-      <p>El servicio está dirigido exclusivamente a:</p>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>El servicio NO incluye:</strong>
+      </p>
 
-      <ul>
-        <li>Empresas legalmente constituidas en España</li>
-        <li>Autónomos dados de alta en el régimen correspondiente</li>
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Asesoría legal sobre compliance RGPD/LSSI</li>
+        <li>Auditoría o validación de bases de datos del cliente</li>
+        <li>Garantía de conformidad legal absoluta</li>
+        <li>Redacción de mensajes o estrategia comercial</li>
+      </ul>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        <strong>Naturaleza:</strong> Infrastructure-as-a-Service, NO consultoría.
+      </p>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">2. Aceptación</h2>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        El uso del servicio implica la aceptación plena de estos Términos. Si no está de acuerdo, no debe contratar ni utilizar el servicio.
+      </p>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">3. Capacidad legal y requisitos de admisión</h2>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        El servicio está dirigido exclusivamente a:
+      </p>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">Requisitos legales obligatorios:</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Empresas legalmente constituidas en España con CIF válido</li>
+        <li>Autónomos dados de alta en RETA o régimen correspondiente</li>
         <li>Mayores de 18 años con capacidad jurídica plena</li>
+        <li>Negocio con establecimiento físico en territorio español</li>
       </ul>
 
-      <h2>4. Obligaciones del cliente</h2>
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">Requisitos técnicos y operativos:</h3>
 
-      <p>El cliente se compromete a:</p>
-
-      <ol>
-        <li>Utilizar el servicio exclusivamente con bases de datos propias y legítimas</li>
-        <li>Haber obtenido consentimiento válido según RGPD de todos los destinatarios</li>
-        <li>No enviar contenido ilícito, ofensivo, fraudulento o que vulnere derechos de terceros</li>
-        <li>Cumplir con la normativa RGPD, LSSI y demás legislación aplicable</li>
-        <li>Facilitar documentación acreditativa si es requerida</li>
-        <li>Mantener actualizada la información de contacto y facturación</li>
-        <li>No ceder o transferir su cuenta a terceros</li>
-      </ol>
-
-      <h2>5. Obligaciones del proveedor</h2>
-
-      <p>El proveedor se compromete a:</p>
-
-      <ul>
-        <li>Prestar el servicio conforme a las especificaciones técnicas publicadas</li>
-        <li>Verificar automáticamente contra Lista Robinson</li>
-        <li>Gestionar automáticamente palabras STOP/BAJA</li>
-        <li>Conservar registros durante 6 años</li>
-        <li>Responder consultas técnicas en 48h laborables</li>
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Base de datos propia de clientes (mínimo 500 contactos)</li>
+        <li>Consentimiento válido RGPD documentado</li>
+        <li>Volumen recurrente estimado: mínimo 3.000 SMS/mes</li>
+        <li>No pertenencia a sectores excluidos (ver sección 4.3)</li>
       </ul>
 
-      <p><strong>El proveedor NO garantiza:</strong></p>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        El proveedor se reserva el derecho de rechazar solicitudes que no cumplan estos requisitos, sin obligación de justificación.
+      </p>
+    </section>
 
-      <ul>
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">4. Obligaciones del cliente</h2>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">4.1. Obligaciones generales</h3>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        El cliente se compromete a:
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li><strong>Titularidad legítima:</strong> Ser titular o estar legalmente autorizado para el uso de la base de datos proporcionada</li>
+        <li><strong>Consentimiento válido:</strong> Haber obtenido consentimiento libre, específico, informado e inequívoco de cada destinatario (Art. 6.1.a RGPD)</li>
+        <li><strong>Información previa:</strong> Haber informado a destinatarios sobre identidad del responsable, finalidad, derechos ARCO y retirada de consentimiento</li>
+        <li><strong>Ausencia de datos sensibles:</strong> No incluir categorías especiales de datos (Art. 9 RGPD)</li>
+        <li><strong>Contenido lícito:</strong> No enviar mensajes ilícitos, ofensivos o que vulneren derechos de terceros</li>
+        <li><strong>Documentación:</strong> Conservar y facilitar si se requiere formularios de consentimiento y registro de fechas</li>
+        <li><strong>Actualización datos:</strong> Mantener actualizada información de contacto y facturación</li>
+        <li><strong>No cesión:</strong> No ceder, transferir o sublicenciar el acceso al servicio</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">4.2. Declaración jurada</h3>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        Al contratar, el cliente declara bajo su exclusiva responsabilidad que:
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Es titular legítimo de la base de datos</li>
+        <li>Ha obtenido consentimiento válido conforme RGPD/LSSI</li>
+        <li>La base de datos NO proviene de compra, alquiler o scraping</li>
+        <li>Dispone de documentación probatoria del cumplimiento normativo</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">4.3. Sectores y contenidos prohibidos</h3>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Sectores prohibidos:</strong>
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Criptoactivos, forex o inversiones no reguladas</li>
+        <li>Juegos de azar, apuestas o loterías</li>
+        <li>Contenido adulto o servicios de citas</li>
+        <li>Multinivel, pirámides o esquemas similares</li>
+        <li>Campañas políticas o captación sindical</li>
+      </ul>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Contenidos prohibidos:</strong>
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 0;">
+        <li>Phishing, fraude o suplantación de identidad</li>
+        <li>Spam no consentido o listas compradas</li>
+        <li>Mensajes difamatorios u ofensivos</li>
+        <li>Promoción de productos ilegales</li>
+      </ul>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">5. Obligaciones del proveedor</h2>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">5.1. Prestaciones incluidas</h3>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Funcionalidades técnicas:</strong>
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Envío programado de SMS a listas del cliente</li>
+        <li>Verificación automática contra Lista Robinson (Adigital)</li>
+        <li>Gestión automática de palabras clave STOP/BAJA</li>
+        <li>Registro de remitente (Sender ID) ante operadoras</li>
+        <li>Panel web con estadísticas básicas</li>
+      </ul>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Conservación y trazabilidad:</strong>
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Almacenamiento cifrado de bases de datos durante contrato</li>
+        <li>Conservación de logs de envío durante 6 años (obligación legal)</li>
+        <li>Exportación de registros en CSV bajo solicitud</li>
+      </ul>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Soporte técnico:</strong>
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Respuesta a consultas técnicas: 48h laborables</li>
+        <li>No incluye soporte telefónico, videollamadas ni consultas legales</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">5.2. Nivel de servicio</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Disponibilidad objetivo: 99% mensual (no garantizada)</li>
+        <li>Velocidad de envío: Hasta 100 SMS/minuto</li>
+        <li>Horario de envío permitido: 9:00-21:00 hora peninsular</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">5.3. Exclusiones expresas</h3>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        El proveedor NO garantiza:
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 0;">
         <li>Disponibilidad 24/7 sin interrupciones</li>
         <li>Tasa de entrega del 100%</li>
-        <li>Que el servicio cumpla expectativas particulares no especificadas</li>
+        <li>Conformidad legal absoluta de bases de datos del cliente</li>
       </ul>
+    </section>
 
-      <h2>6. Limitación de responsabilidad</h2>
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">6. Limitación de responsabilidad</h2>
 
-      <p>El proveedor NO es responsable de:</p>
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">6.1. Responsabilidades excluidas</h3>
 
-      <ul>
-        <li>La legalidad del origen de las bases de datos del cliente</li>
-        <li>El contenido de los mensajes enviados</li>
-        <li>Sanciones administrativas impuestas al cliente por uso indebido</li>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        El proveedor NO es responsable de:
+      </p>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Legalidad del origen de las bases de datos del cliente</li>
+        <li>Contenido de los mensajes enviados</li>
+        <li>Sanciones administrativas por uso indebido</li>
+        <li>Fallos técnicos de operadores telefónicos</li>
         <li>Daños indirectos, lucro cesante o pérdida de datos</li>
-        <li>Fallos técnicos de operadores telefónicos externos</li>
       </ul>
 
-      <p><strong>Responsabilidad máxima:</strong> Limitada al importe pagado por el cliente en los últimos 3 meses.</p>
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">6.2. Limitación cuantitativa</h3>
 
-      <h2>7. Propiedad intelectual</h2>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Responsabilidad máxima por daños directos:</strong> Importe pagado en últimos 3 meses.
+      </p>
 
-      <p>Todos los derechos de propiedad intelectual sobre la plataforma, diseño, código y marca son del proveedor. El cliente obtiene únicamente una licencia de uso limitada, no exclusiva e intransferible.</p>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        Esta limitación NO aplica en caso de:
+      </p>
 
-      <h2>8. Facturación y pago</h2>
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 0;">
+        <li>Dolo o negligencia grave del proveedor</li>
+        <li>Daños personales</li>
+        <li>Infracciones de protección de datos imputables al proveedor</li>
+      </ul>
+    </section>
 
-      <ul>
-        <li>Tarifa: 199 €/mes + IVA</li>
-        <li>Cobro: Mensual anticipado por domiciliación SEPA</li>
-        <li>Configuración inicial: 150 € (pago único no reembolsable)</li>
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">7. Propiedad intelectual</h2>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        Todos los derechos sobre la plataforma, diseño, código y marca son del proveedor. El cliente obtiene licencia de uso limitada, no exclusiva e intransferible.
+      </p>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">8. Facturación y condiciones económicas</h2>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">8.1. Tarifas</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Cuota mensual: 199,00 € + IVA (hasta 10.000 SMS/mes)</li>
+        <li>SMS adicionales: 0,025 € + IVA/unidad</li>
+        <li>Configuración inicial: 150,00 € + IVA (pago único)</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">8.2. Forma de pago</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Domiciliación bancaria SEPA</li>
+        <li>Mensual anticipada (1º día hábil)</li>
         <li>Periodo mínimo: 3 meses</li>
       </ul>
 
-      <p>El impago de una mensualidad conlleva suspensión automática del servicio.</p>
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">8.3. SMS no consumidos</h3>
 
-      <h2>9. Cancelación</h2>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        No acumulables ni trasladables al mes siguiente.
+      </p>
 
-      <p>Ver <a href="/#cancelacion">Política de Cancelación</a> en la página principal.</p>
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">8.4. Impago</h3>
 
-      <h2>10. Modificación de términos</h2>
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 0;">
+        <li>Suspensión automática: 5 días naturales</li>
+        <li>Reactivación: Pago deuda + cuota mes en curso</li>
+      </ul>
+    </section>
 
-      <p>El proveedor se reserva el derecho de modificar estos Términos previa notificación por email con 15 días de antelación. El uso continuado tras la modificación implica aceptación.</p>
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">9. Cancelación y finalización del servicio</h2>
 
-      <h2>11. Suspensión del servicio</h2>
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">9.1. Cancelación por el cliente</h3>
 
-      <p>El proveedor puede suspender o cancelar el servicio inmediatamente, sin previo aviso y sin reembolso, en caso de:</p>
-
-      <ul>
-        <li>Incumplimiento de estos Términos</li>
-        <li>Denuncia fundada de destinatario</li>
-        <li>Investigación de autoridad competente (AEPD, juez, etc.)</li>
-        <li>Uso fraudulento o abusivo</li>
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Notificación: Email a legal@smslegal.es (30 días preaviso)</li>
+        <li>Acceso: Hasta fin periodo pagado</li>
+        <li>Descarga datos: 15 días tras cancelación</li>
       </ul>
 
-      <h2>12. Confidencialidad</h2>
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">9.2. Cancelación por el proveedor</h3>
 
-      <p>Ambas partes se comprometen a no divulgar información confidencial obtenida en el marco de la relación contractual.</p>
-
-      <h2>13. Protección de datos</h2>
-
-      <p>Ver <a href="/privacidad">Política de Privacidad</a>.</p>
-
-      <h2>14. Ley aplicable y jurisdicción</h2>
-
-      <p>Estos Términos se rigen por la legislación española. Para cualquier controversia, las partes se someten a los Juzgados y Tribunales del domicilio del proveedor, con renuncia expresa a cualquier otro fuero.</p>
-
-      <h2>15. Contacto</h2>
-
-      <p>Para consultas sobre estos Términos: <a href="mailto:legal@smslegal.es">legal@smslegal.es</a></p>
-
-      <hr />
-
-      <p class="text-center">
-        <a href="/" class="text-doc-cta hover:underline">← Volver al inicio</a>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Causas inmediatas (sin preaviso):</strong>
       </p>
-    </article>
-  </SeccionDocumental>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 0;">
+        <li>Uso de listas compradas/scraping</li>
+        <li>Contenido prohibido</li>
+        <li>Tasa de bajas >5%</li>
+        <li>Investigación AEPD/autoridad competente</li>
+      </ul>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">10. Modificación de términos y condiciones</h2>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">10.1. Modificaciones menores</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Notificación: Email 30 días antelación</li>
+        <li>Aceptación tácita: Uso continuado</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">10.2. Modificaciones sustanciales</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 0;">
+        <li>Notificación: Email 45 días antelación</li>
+        <li>Opción: Aceptar o cancelar sin penalización</li>
+      </ul>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">11. Suspensión cautelar del servicio</h2>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">11.1. Suspensión inmediata</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Patrones de spam/phishing detectados</li>
+        <li>Denuncia verificada ante AEPD</li>
+        <li>Tasa de bajas >10% single envío</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">11.2. Con preaviso (72h)</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 0;">
+        <li>Notificación email + plazo alegaciones</li>
+        <li>Decisión final: 24h tras alegaciones</li>
+      </ul>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">12. Confidencialidad</h2>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        Ambas partes se comprometen a no divulgar información confidencial obtenida en la relación contractual.
+      </p>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">13. Protección de datos</h2>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        Ver Política de Privacidad.
+      </p>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">14. Ley aplicable y jurisdicción</h2>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">14.1. Legislación aplicable</h3>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        Legislación española (Código Civil, LSSI-CE, RGPD, LCC).
+      </p>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">14.2. Jurisdicción</h3>
+
+      <ul style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Empresas: Juzgados de [TU CIUDAD], España</li>
+        <li>Autónomos: Domicilio del cliente o proveedor (a elección del cliente)</li>
+      </ul>
+
+      <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">14.3. Resolución alternativa</h3>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 0;">
+        Negociación directa (30 días) o Juntas Arbitrales de Consumo.
+      </p>
+    </section>
+
+    <section style="margin-top: 6rem; padding-top: 6rem; border-top: 1px solid #cccccc;">
+      <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.5rem; color: #1a1a1a;">15. Contacto</h2>
+
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #1a1a1a; margin-bottom: 1rem;">
+        <strong>Email:</strong> legal@smslegal.es<br />
+        <strong>Asunto:</strong> Consulta Términos del Servicio<br />
+        <strong>Plazo respuesta:</strong> 48h laborales
+      </p>
+
+      <p style="text-align: center; margin-top: 3rem;">
+        <a href="/" style="color: #2c3e50; text-decoration: none; font-size: 0.9375rem;">
+          ← Volver al inicio
+        </a>
+      </p>
+    </section>
+
+    <footer style="border-top: 1px solid #e0e0e0; margin-top: 6rem; padding: 3rem 0; background: #fafafa;">
+      <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-family: 'IBM Plex Serif', serif; color: #1a1a1a;">SMS Legal</h3>
+        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; line-height: 1.8; margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
+          INFRAESTRUCTURA DE ALTA DISPONIBILIDAD PARA EL CUMPLIMIENTO NORMATIVO.
+        </p>
+        
+        <nav style="margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
+          <a href="/privacidad" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
+            PRIVACIDAD
+          </a>
+          <a href="/terminos" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
+            TÉRMINOS
+          </a>
+          <a href="/aviso-legal" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">
+            AVISO LEGAL
+          </a>
+        </nav>
+        
+        <p style="font-size: 0.6875rem; color: #4a4a4a; margin-bottom: 1rem; font-family: 'IBM Plex Sans', sans-serif;">
+          © 2025 SMS LEGAL
+        </p>
+        <p style="font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: #4a4a4a; font-family: 'IBM Plex Sans', sans-serif;">
+          NO COOKIES · NO TRACKING · PURE DOCUMENT
+        </p>
+      </div>
+    </footer>
+  </main>
 </DocumentoBase>
 
 <style is:global>
-  .prose-doc {
-    color: var(--doc-text);
+  /* Responsive overrides */
+  @media (max-width: 768px) {
+    main {
+      margin: 1rem !important;
+      padding: 2rem 1rem !important;
+    }
+    header h1 {
+      font-size: 2.25rem !important;
+    }
   }
 
-  .prose-doc h1 {
-    font-size: 34px;
-    font-family: 'IBM Plex Serif', Georgia, serif;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-  }
-
-  .prose-doc h2 {
-    font-size: 26px;
-    font-family: 'IBM Plex Serif', Georgia, serif;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-  }
-
-  .prose-doc p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-  }
-
-  .prose-doc ul, .prose-doc ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-  }
-
-  .prose-doc li {
-    margin-bottom: 0.5rem;
-  }
-
-  .prose-doc hr {
-    border: 0;
-    border-top: 1px solid var(--doc-border);
-    margin: 2rem 0;
+  /* Print styles */
+  @media print {
+    body {
+      margin: 0;
+      padding: 2rem;
+    }
+    main {
+      max-width: 100%;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
   }
 </style>

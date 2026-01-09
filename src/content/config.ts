@@ -28,6 +28,20 @@ const sectionsCollection = defineCollection({
   })
 });
 
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string().min(10).max(200),
+    description: z.string().min(20).max(300),
+    pubDate: z.date(),
+    author: z.string(),
+    category: z.enum(['Marco Legal', 'Técnico', 'Casos Prácticos']),
+    tags: z.array(z.string()),
+    featured: z.boolean().default(false)
+  })
+});
+
 export const collections = {
-  'sections': sectionsCollection
+  'sections': sectionsCollection,
+  'blog': blogCollection
 };

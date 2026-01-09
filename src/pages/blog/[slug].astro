@@ -59,25 +59,8 @@ const schemaOrg = {
   schemaOrg={schemaOrg}
 >
 
-  <!-- TOC/ÍNDICE ARRIBA -->
-  <nav class="toc-accordion" style="max-width: 72ch; margin: 2rem auto 3rem auto; padding: 1.5rem; background: var(--doc-bg-alt); border: 1px solid var(--doc-border); border-radius: 0.5rem;">
-    <details style="cursor: pointer;">
-      <summary style="font-family: 'IBM Plex Serif', serif; font-size: 1.125rem; font-weight: 600; color: #1a1a1a; text-transform: uppercase; letter-spacing: 0.05em;">
-        📑 Índice de Contenidos
-      </summary>
-      <ul style="list-style: none; padding: 1.5rem 0 0 0; margin: 0; font-size: 0.875rem; line-height: 1.8; font-family: 'IBM Plex Sans', sans-serif;">
-        {h2Headings.map((heading) => (
-          <li>
-            <a href={`#${heading.slug}`} style="color: #1a1a1a; text-decoration: none;">
-              {heading.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </details>
-  </nav>
-
-  <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 0 auto 4rem auto; max-width: 72ch; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 2rem auto; max-width: 720px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" style="font-size: 0.875rem; color: var(--doc-secondary); margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
       <a href="/" style="color: var(--doc-secondary); text-decoration: none;">Inicio</a>
@@ -97,10 +80,6 @@ const schemaOrg = {
         {title}
       </h1>
       
-      <p style="font-size: 1.125rem; color: #4a4a4a; line-height: 1.6; margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
-        {description}
-      </p>
-      
       <div style="display: flex; gap: 2rem; font-size: 0.875rem; color: #4a4a4a; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; font-family: 'IBM Plex Sans', sans-serif;">
         <span>📅 Última actualización: {formattedDate}</span>
         <span>⏱️ Tiempo de lectura: {readingTime} minutos</span>
@@ -108,8 +87,27 @@ const schemaOrg = {
     </header>
 
     <!-- Article Content -->
-    <article style="margin-top: 4rem;">
+    <article style="margin-top: 3rem;">
+      
+      <!-- TOC / ÍNDICE DENTRO DEL ARTICLE -->
+      <nav class="toc" style="background: var(--doc-bg-alt); border: 1px solid var(--doc-border); padding: 2rem; border-radius: 0.5rem; margin-bottom: 3rem;">
+        <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: #1a1a1a;">
+          📑 Índice de Contenidos
+        </h2>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem;">
+          {h2Headings.map((heading) => (
+            <li style="margin-bottom: 0.75rem; line-height: 1.6;">
+              <a href={`#${heading.slug}`} style="color: #1a1a1a; text-decoration: none;">
+                {heading.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <!-- Contenido Renderizado del Markdown -->
       <Content />
+
     </article>
 
     <!-- Article Footer -->
@@ -142,28 +140,6 @@ const schemaOrg = {
       </div>
     </footer>
 
-    <!-- Site Footer -->
-    <div style="border-top: 1px solid #e0e0e0; margin-top: 6rem; padding: 3rem 0; background: #fafafa;">
-      <div style="max-width: 100%; margin: 0 auto; text-align: center; font-family: 'IBM Plex Sans', sans-serif;">
-        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-family: 'IBM Plex Serif', serif; color: #1a1a1a;">SMS Legal</h3>
-        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; line-height: 1.8; margin-bottom: 2rem;">
-          INFRAESTRUCTURA DE ALTA DISPONIBILIDAD PARA EL CUMPLIMIENTO NORMATIVO.
-        </p>
-        
-        <nav style="margin-bottom: 2rem;">
-          <a href="/aviso-legal" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">AVISO LEGAL</a>
-          <a href="/privacidad" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">PRIVACIDAD</a>
-          <a href="/terminos" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">TÉRMINOS</a>
-        </nav>
-        
-        <p style="font-size: 0.6875rem; color: #4a4a4a; margin-bottom: 1rem;">
-          © 2026 SMS LEGAL
-        </p>
-        <p style="font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: #4a4a4a;">
-          NO COOKIES · NO TRACKING · PURE DOCUMENT
-        </p>
-      </div>
-    </div>
   </main>
 </DocumentoBase>
 
@@ -212,19 +188,47 @@ const schemaOrg = {
     color: var(--doc-cta);
   }
 
-  /* TOC links */
-  .toc-accordion a {
+  /* TOC styling */
+  .toc {
+    background: var(--doc-bg-alt);
+    border: 1px solid var(--doc-border);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .toc h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .toc li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .toc a {
     color: #1a1a1a;
     text-decoration: none;
   }
 
-  .toc-accordion a:hover {
+  .toc a:hover {
     text-decoration: underline;
   }
 
   /* Responsive design */
   @media (max-width: 768px) {
-    main, .toc-accordion {
+    main {
       margin: 1rem !important;
       padding: 2rem 1rem !important;
     }

@@ -14,39 +14,6 @@ const posts = allPosts.sort((a, b) =>
   description="Artículos y guías sobre el marco legal del envío de SMS comerciales en España"
   ogUrl="https://smslegal.es/blog"
 >
-  <!-- Navigation -->
-  <nav class="main-nav" style="display: flex; align-items: center; gap: 2rem; padding: 1.5rem 2rem; margin: 2rem auto; max-width: 720px; background: #ffffff; border: 1px solid #1a1a1a; font-family: 'IBM Plex Sans', sans-serif;">
-    <a href="/" style="color: #1a1a1a; text-decoration: none; font-weight: 600;">Inicio</a>
-    
-    <div class="dropdown" style="position: relative;">
-      <button class="dropdown-trigger" style="background: none; border: none; cursor: pointer; color: #1a1a1a; font-size: 1rem; padding: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
-        📖 Blog <span style="font-size: 0.75rem;">▼</span>
-      </button>
-      <div class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid #cccccc; border-radius: 0.25rem; min-width: 240px; z-index: 10; margin-top: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <a href="/blog/guia-marco-legal-sms-comerciales-espana" style="display: block; padding: 0.75rem 1rem; color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #f0f0f0; font-size: 0.875rem;">Guía Legal SMS</a>
-        <span style="display: block; padding: 0.75rem 1rem; color: #999; font-size: 0.875rem;">Sanciones AEPD (próximamente)</span>
-        <span style="display: block; padding: 0.75rem 1rem; color: #999; font-size: 0.875rem;">Lista Robinson (próximamente)</span>
-      </div>
-    </div>
-    
-    <a href="/aviso-legal" style="color: #1a1a1a; text-decoration: none; font-size: 0.875rem;">Aviso Legal</a>
-    <a href="/privacidad" style="color: #1a1a1a; text-decoration: none; font-size: 0.875rem;">Privacidad</a>
-    <a href="/terminos" style="color: #1a1a1a; text-decoration: none; font-size: 0.875rem;">Términos</a>
-  </nav>
-
-  <script>
-    const dropdown = document.querySelector('.dropdown');
-    const menu = dropdown?.querySelector('.dropdown-menu');
-
-    if (dropdown && menu) {
-      dropdown.addEventListener('mouseenter', () => {
-        (menu as HTMLElement).style.display = 'block';
-      });
-      dropdown.addEventListener('mouseleave', () => {
-        (menu as HTMLElement).style.display = 'none';
-      });
-    }
-  </script>
 
   <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 2rem auto; max-width: 720px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
     <!-- Header -->

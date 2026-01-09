@@ -1,0 +1,155 @@
+---
+import DocumentoBase from '../../layouts/DocumentoBase.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+// Sort by publication date, newest first
+const posts = allPosts.sort((a, b) => 
+  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<DocumentoBase
+  title="Blog | SMS Legal"
+  description="Artículos y guías sobre el marco legal del envío de SMS comerciales en España"
+  ogUrl="https://smslegal.es/blog"
+>
+  <!-- Navigation -->
+  <nav class="main-nav" style="display: flex; align-items: center; gap: 2rem; padding: 1.5rem 2rem; margin: 2rem auto; max-width: 720px; background: #ffffff; border: 1px solid #1a1a1a; font-family: 'IBM Plex Sans', sans-serif;">
+    <a href="/" style="color: #1a1a1a; text-decoration: none; font-weight: 600;">Inicio</a>
+    
+    <div class="dropdown" style="position: relative;">
+      <button class="dropdown-trigger" style="background: none; border: none; cursor: pointer; color: #1a1a1a; font-size: 1rem; padding: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-family: 'IBM Plex Sans', sans-serif;">
+        📖 Blog <span style="font-size: 0.75rem;">▼</span>
+      </button>
+      <div class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid #cccccc; border-radius: 0.25rem; min-width: 240px; z-index: 10; margin-top: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <a href="/blog/guia-marco-legal-sms-comerciales-espana" style="display: block; padding: 0.75rem 1rem; color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #f0f0f0; font-size: 0.875rem;">Guía Legal SMS</a>
+        <span style="display: block; padding: 0.75rem 1rem; color: #999; font-size: 0.875rem;">Sanciones AEPD (próximamente)</span>
+        <span style="display: block; padding: 0.75rem 1rem; color: #999; font-size: 0.875rem;">Lista Robinson (próximamente)</span>
+      </div>
+    </div>
+    
+    <a href="/aviso-legal" style="color: #1a1a1a; text-decoration: none; font-size: 0.875rem;">Aviso Legal</a>
+    <a href="/privacidad" style="color: #1a1a1a; text-decoration: none; font-size: 0.875rem;">Privacidad</a>
+    <a href="/terminos" style="color: #1a1a1a; text-decoration: none; font-size: 0.875rem;">Términos</a>
+  </nav>
+
+  <script>
+    const dropdown = document.querySelector('.dropdown');
+    const menu = dropdown?.querySelector('.dropdown-menu');
+
+    if (dropdown && menu) {
+      dropdown.addEventListener('mouseenter', () => {
+        (menu as HTMLElement).style.display = 'block';
+      });
+      dropdown.addEventListener('mouseleave', () => {
+        (menu as HTMLElement).style.display = 'none';
+      });
+    }
+  </script>
+
+  <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 2rem auto; max-width: 720px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <!-- Header -->
+    <header>
+      <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; margin-bottom: 1rem; font-family: 'IBM Plex Sans', sans-serif;">
+        Blog
+      </p>
+      <h1 style="font-family: 'IBM Plex Serif', serif; font-size: 2.5rem; font-weight: 600; line-height: 1.2; margin-bottom: 1.5rem; color: #1a1a1a;">
+        Guías y Recursos sobre SMS Comerciales
+      </h1>
+      <p style="font-size: 1.125rem; color: #4a4a4a; line-height: 1.6; margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
+        Artículos informativos sobre el marco legal, buenas prácticas y cumplimiento normativo para el envío de SMS comerciales en España.
+      </p>
+    </header>
+
+    <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 3rem 0;" />
+
+    <!-- Posts List -->
+    <section style="display: flex; flex-direction: column; gap: 3rem;">
+      {posts.map((post) => {
+        const { Content } = post.render();
+        const formattedDate = post.data.pubDate.toLocaleDateString('es-ES', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        return (
+          <article>
+            {post.data.featured && (
+              <span style="display: inline-block; background: #f0f0f0; padding: 0.25rem 0.75rem; text-transform: uppercase; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; color: #4a4a4a; font-family: 'IBM Plex Sans', sans-serif; margin-bottom: 0.75rem;">
+                Destacado
+              </span>
+            )}
+
+            <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 1.75rem; font-weight: 600; line-height: 1.3; margin-bottom: 1rem; color: #1a1a1a;">
+              <a href={`/blog/${post.slug}`} style="color: #1a1a1a; text-decoration: none; transition: text-decoration 0.15s ease;">
+                {post.data.title}
+              </a>
+            </h2>
+
+            <p style="font-size: 1rem; color: #4a4a4a; line-height: 1.6; margin-bottom: 1rem; font-family: 'IBM Plex Sans', sans-serif;">
+              {post.data.description}
+            </p>
+
+            <div style="display: flex; gap: 1.5rem; font-size: 0.875rem; color: #4a4a4a; font-family: 'IBM Plex Sans', sans-serif;">
+              <span>📅 {formattedDate}</span>
+              <span>📁 {post.data.category}</span>
+              <span>✍️ {post.data.author}</span>
+            </div>
+
+            {post.data.tags && post.data.tags.length > 0 && (
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                {post.data.tags.map((tag) => (
+                  <span style="background: #f8f9fa; padding: 0.25rem 0.75rem; font-size: 0.75rem; color: #4a4a4a; font-family: 'IBM Plex Sans', sans-serif;">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </article>
+        );
+      })}
+    </section>
+
+    <!-- Site Footer -->
+    <div style="border-top: 1px solid #e0e0e0; margin-top: 6rem; padding: 3rem 0; background: #fafafa;">
+      <div style="max-width: 720px; margin: 0 auto; text-align: center; font-family: 'IBM Plex Sans', sans-serif;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-family: 'IBM Plex Serif', serif; color: #1a1a1a;">SMS Legal</h3>
+        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; line-height: 1.8; margin-bottom: 2rem;">
+          INFRAESTRUCTURA DE ALTA DISPONIBILIDAD PARA EL CUMPLIMIENTO NORMATIVO.
+        </p>
+        
+        <nav style="margin-bottom: 2rem;">
+          <a href="/aviso-legal" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">AVISO LEGAL</a>
+          <a href="/privacidad" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">PRIVACIDAD</a>
+          <a href="/terminos" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; text-decoration: none; margin: 0 1rem;">TÉRMINOS</a>
+        </nav>
+        
+        <p style="font-size: 0.6875rem; color: #4a4a4a; margin-bottom: 1rem;">
+          © 2026 SMS LEGAL
+        </p>
+        <p style="font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: #4a4a4a;">
+          NO COOKIES · NO TRACKING · PURE DOCUMENT
+        </p>
+      </div>
+    </div>
+  </main>
+</DocumentoBase>
+
+<style is:global>
+  article h2 a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      margin: 1rem !important;
+      padding: 2rem 1rem !important;
+    }
+
+    header h1 {
+      font-size: 2rem !important;
+    }
+  }
+</style>

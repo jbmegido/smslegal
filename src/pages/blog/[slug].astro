@@ -59,25 +59,7 @@ const schemaOrg = {
   schemaOrg={schemaOrg}
 >
 
-  <!-- TOC/ÍNDICE ARRIBA -->
-  <nav class="toc-accordion" style="max-width: 72ch; margin: 2rem auto 3rem auto; padding: 1.5rem; background: var(--doc-bg-alt); border: 1px solid var(--doc-border); border-radius: 0.5rem;">
-    <details style="cursor: pointer;">
-      <summary style="font-family: 'IBM Plex Serif', serif; font-size: 1.125rem; font-weight: 600; color: #1a1a1a; text-transform: uppercase; letter-spacing: 0.05em;">
-        📑 Índice de Contenidos
-      </summary>
-      <ul style="list-style: none; padding: 1.5rem 0 0 0; margin: 0; font-size: 0.875rem; line-height: 1.8; font-family: 'IBM Plex Sans', sans-serif;">
-        {h2Headings.map((heading) => (
-          <li>
-            <a href={`#${heading.slug}`} style="color: #1a1a1a; text-decoration: none;">
-              {heading.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </details>
-  </nav>
-
-  <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 0 auto 4rem auto; max-width: 72ch; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <main style="border: 2px solid #1a1a1a; padding: 3rem 2rem; margin: 2rem auto 4rem auto; max-width: 720px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" style="font-size: 0.875rem; color: var(--doc-secondary); margin-bottom: 2rem; font-family: 'IBM Plex Sans', sans-serif;">
       <a href="/" style="color: var(--doc-secondary); text-decoration: none;">Inicio</a>
@@ -108,7 +90,25 @@ const schemaOrg = {
     </header>
 
     <!-- Article Content -->
-    <article style="margin-top: 4rem;">
+    <article style="margin-top: 3rem;">
+      
+      <!-- TOC/ÍNDICE DENTRO DEL ARTICLE -->
+      <nav class="toc" style="background: var(--doc-bg-alt); border: 1px solid var(--doc-border); padding: 2rem; border-radius: 0.5rem; margin-bottom: 3rem;">
+        <h2 style="font-family: 'IBM Plex Serif', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: #1a1a1a;">
+          📑 Índice de Contenidos
+        </h2>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem;">
+          {h2Headings.map((heading) => (
+            <li style="margin-bottom: 0.75rem; line-height: 1.6;">
+              <a href={`#${heading.slug}`} style="color: #1a1a1a; text-decoration: none;">
+                {heading.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      
+      <!-- CONTENIDO RENDERIZADO DEL MARKDOWN -->
       <Content />
     </article>
 
@@ -212,21 +212,53 @@ const schemaOrg = {
     color: var(--doc-cta);
   }
 
-  /* TOC links */
-  .toc-accordion a {
+  /* TOC styling */
+  .toc {
+    background: var(--doc-bg-alt);
+    border: 1px solid var(--doc-border);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .toc h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .toc li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .toc a {
     color: #1a1a1a;
     text-decoration: none;
   }
 
-  .toc-accordion a:hover {
+  .toc a:hover {
     text-decoration: underline;
   }
 
   /* Responsive design */
   @media (max-width: 768px) {
-    main, .toc-accordion {
+    main {
       margin: 1rem !important;
       padding: 2rem 1rem !important;
+    }
+    
+    .toc {
+      padding: 1.5rem !important;
     }
 
     header h1 {

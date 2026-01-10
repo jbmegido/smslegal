@@ -16,7 +16,7 @@ El envío de mensajes SMS con fines comerciales en España está sujeto a un mar
 
 ### 1.1 Reglamento General de Protección de Datos (RGPD)
 
-El RGPD establece las bases para el tratamiento de datos personales en la Unión Europea. Para el envío de SMS comerciales, los artículos más relevantes son:
+El [RGPD](https://eur-lex.europa.eu/eli/reg/2016/679/oj) establece las bases para el tratamiento de datos personales en la Unión Europea. Para el envío de SMS comerciales, los artículos más relevantes son:
 
 - **Artículo 6**: Base legal del tratamiento (consentimiento, contrato, interés legítimo)
 - **Artículo 7**: Condiciones para el consentimiento
@@ -24,7 +24,7 @@ El RGPD establece las bases para el tratamiento de datos personales en la Unión
 
 ### 1.2 Ley de Servicios de la Sociedad de la Información (LSSI-CE)
 
-La LSSI-CE regula específicamente las comunicaciones comerciales electrónicas:
+La [LSSI-CE](https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758) regula específicamente las comunicaciones comerciales electrónicas:
 
 - **Artículo 20**: Comunicaciones comerciales por correo electrónico o medios equivalentes electrónicos
 - **Artículo 21**: Obligación de identificar al remitente
@@ -72,7 +72,7 @@ Para que el consentimiento sea válido bajo el RGPD, debe cumplir:
 
 ### 3.1 ¿Qué es la Lista Robinson?
 
-La Lista Robinson es un servicio de exclusión voluntaria que permite a los consumidores registrarse para no recibir comunicaciones comerciales por SMS, correo postal, email, o fax.
+La [Lista Robinson](https://www.listarobinson.es/) es un servicio de exclusión voluntaria que permite a los consumidores registrarse para no recibir comunicaciones comerciales por SMS, correo postal, email, o fax.
 
 ### 3.2 Obligación de Cotejo
 
@@ -166,7 +166,11 @@ Para cumplir con la LSSI-CE y RGPD, registre:
 - **Recomendado**: 2-3 años para defensas AEPD
 - **Óptimo**: 5 años para litigios comerciales
 
+**Estos registros de envío, consentimiento y bajas son precisamente lo que la AEPD revisa en inspecciones. Su ausencia o deficiencia técnica determina directamente el tipo y gravedad de las sanciones.**
+
 ## 7. Sanciones y Responsabilidades
+
+**La ausencia o deficiencia en cualquiera de estos registros convierte infracciones técnicas en sanciones económicas cuantificables.**
 
 ### 7.1 Sanciones de la AEPD
 

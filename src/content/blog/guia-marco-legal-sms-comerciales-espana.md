@@ -195,26 +195,36 @@ Además de sanciones administrativas, pueden aplicarse:
 
 ## 8. Buenas Prácticas Operativas
 
-### 8.1 Antes del Envío
+#### 8.1 Antes del Envío
 
 ✅ Verificar Lista Robinson
+
 ✅ Confirmar consentimiento actual
+
 ✅ Revisar identificación del remitente
+
 ✅ Incluir mecanismo de baja
+
 ✅ Documentar todo el proceso
 
-### 8.2 Durante el Envío
+#### 8.2 Durante el Envío
 
 ✅ Segmentar bases de datos
+
 ✅ Respetar horarios legales (9:00-21:00)
+
 ✅ Limitar frecuencia de comunicaciones
+
 ✅ Monitorear respuestas y bajas
 
-### 8.3 Después del Envío
+#### 8.3 Después del Envío
 
 ✅ Registrar cada envío
+
 ✅ Procesar bajas rápidamente
+
 ✅ Analizar métricas de respuesta
+
 ✅ Documentar casos problemáticos
 
 ## 9. Casos Prácticos y Ejemplos

@@ -8,30 +8,9 @@ tags: ["AEPD", "Sanciones", "SMS", "Cumplimiento", "RGPD", "LSSI", "Casos Reales
 featured: true
 ---
 
-# Sanciones AEPD por SMS: Casos Reales y Cuantías (2024-2026)
-
-**📅 Última actualización:** Enero 2026  
-**⏱️ Tiempo de lectura:** 12 minutos
-
----
-
 El envío de mensajes de texto (SMS) con fines comerciales se ha consolidado como una de las herramientas de marketing más directas y con mayores tasas de apertura. Sin embargo, esta cercanía con el usuario ha provocado un endurecimiento proporcional en la supervisión por parte de la Agencia Española de Protección de Datos (AEPD). Para una empresa, la línea entre una campaña exitosa y una infracción grave es extremadamente delgada.
 
 Este artículo analiza si el riesgo de sanción por el uso indebido de SMS es una posibilidad teórica o una realidad financiera inminente. A través de la revisión de estadísticas oficiales y resoluciones recientes, desglosaremos cómo la AEPD califica los incumplimientos en materia de consentimiento, el derecho de oposición y la seguridad en el tratamiento de datos. El objetivo es ofrecer una visión técnica y jurídica sobre las multas derivadas de la [Ley 34/2002 (LSSI)](https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758) y el Reglamento General de Protección de Datos (RGPD), permitiendo a los responsables de tratamiento entender el coste real de la falta de cumplimiento operativo.
-
----
-
-## Índice de contenidos
-
-1. [Contexto Legal: El Marco Normativo en España](#contexto-legal)
-2. [Estadísticas y Panorama Sancionador (2024-2026)](#estadisticas)
-3. [Casos Reales Documentados y Cuantías](#casos-reales)
-4. [Errores Comunes en el Envío de SMS](#errores-comunes)
-5. [Consecuencias del Incumplimiento](#consecuencias)
-6. [Cómo Cumplir Correctamente: Hoja de Ruta](#como-cumplir)
-7. [Cómo Evitar Estas Sanciones](#evitar-sanciones)
-8. [Recursos Adicionales](#recursos)
-9. [Resumen y Checklist](#resumen)
 
 ---
 
@@ -329,10 +308,6 @@ Para profundizar en la normativa y casos específicos:
 - [ ] ¿He procesado todas las bajas de las últimas 24-48 horas?
 - [ ] ¿Tengo contrato de Encargado firmado con mi proveedor SMS?
 - [ ] ¿Estoy usando soft opt-in con clientes de hace más de 12 meses?
-
----
-
-**Nota legal:** Esta guía tiene carácter puramente informativo y educativo. No constituye asesoramiento legal vinculante. Para casos específicos o situaciones de litigio, se recomienda encarecidamente consultar con un abogado especializado en derecho digital y protección de datos.
 
 ---
 

@@ -38,6 +38,7 @@ Esta orden ministerial establece requisitos específicos para el envío de SMS c
 - Mecanismos de oposición gratuitos y permanentes
 - Prohibición de mensajes fraudulentos o engañosos
 - Registro de envíos para fines de control
+- A partir 2026: Alias alfanuméricos obligatorios CNMC [web:103]
 
 ## 2. Requisitos de Consentimiento
 
@@ -169,18 +170,18 @@ Para cumplir con la LSSI-CE y RGPD, registre:
 
 ### 7.1 Sanciones de la AEPD
 
-**Leves** (hasta 10.000€):
+**Leves** (hasta 30.000€):
 - Falta menor en la identificación
 - Falta de respuesta a solicitud de oposición (casos aislados)
 - Incumplimiento técnico sin impacto en privacidad
 
-**Graves** (10.000€ - 40.000€):
+**Graves** (30.001€ - 150.000€):
 - Envío masivo sin consentimiento
 - Falta sistemática de cotejo Lista Robinson
 - Incumplimiento del derecho de oposición
 - Identificación engañosa del remitente
 
-**Muy Graves** (40.000€ - 60.000€):
+**Muy Graves** (150.001€+):
 - Tratamiento ilícito masivo de datos
 - Incumplimiento reiterado de medidas AEPD
 - Comunicaciones fraudulentas o engañosas

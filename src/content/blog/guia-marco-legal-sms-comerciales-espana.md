@@ -8,8 +8,6 @@ tags: ["RGPD", "LSSI", "SMS", "AEPD", "Lista Robinson"]
 featured: true
 ---
 
-# Guía Completa: Marco Legal del Envío de SMS Comerciales en España (2026)
-
 ## Introducción
 
 El envío de mensajes SMS con fines comerciales en España está sujeto a un marco normativo complejo que combina el Reglamento General de Protección de Datos (RGPD), la Ley de Servicios de la Sociedad de la Información (LSSI-CE), y normativas específicas como la Orden TDF/149/2025. Esta guía proporciona un análisis exhaustivo de las obligaciones legales para empresas y organizaciones que utilizan SMS como canal de comunicación comercial.

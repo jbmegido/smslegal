@@ -477,7 +477,7 @@ La automatización es especialmente recomendable si tu empresa:
 - Opera en sectores de **alto riesgo sancionador** (seguros, telecomunicaciones, servicios financieros)
 - Necesita **evidencia trazable inmediata** para auditorías o inspecciones
 
-Si tu negocio envía más de 3.000 SMS al mes y necesitas garantizar el cumplimiento sin dedicar entre 100 y 400 horas anuales al proceso manual, existen [infraestructuras especializadas con verificación automática de Lista Robinson](/solicitud) que reducen el tiempo operativo de horas a minutos por campaña, generando logs de compliance automáticos.
+Si tu negocio envía más de 3.000 SMS al mes y necesitas garantizar el cumplimiento sin dedicar entre 100 y 400 horas anuales al proceso manual, existen [infraestructuras especializadas con verificación automática de Lista Robinson](/) que reducen el tiempo operativo de horas a minutos por campaña, generando logs de compliance automáticos.
 
 <a id="recursos-adicionales"></a>
 ## 10. Recursos Adicionales

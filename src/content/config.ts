@@ -35,7 +35,7 @@ const blogCollection = defineCollection({
     description: z.string().min(20).max(300),
     pubDate: z.date(),
     author: z.string(),
-    category: z.enum(['Marco Legal', 'Técnico', 'Casos Prácticos']),
+    category: z.enum(['Marco Legal', 'Técnico', 'Casos Prácticos', 'Procesos de Cumplimiento']),
     tags: z.array(z.string()),
     featured: z.boolean().default(false)
   })
